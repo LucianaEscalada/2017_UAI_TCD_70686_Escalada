@@ -1,0 +1,60 @@
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\bin\Debug\BLL.dll
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\bin\Debug\BLL.pdb
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\bin\Debug\BLL.xml
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\bin\Debug\BE.dll
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\bin\Debug\DAL.dll
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\bin\Debug\BE.pdb
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\bin\Debug\BE.xml
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\bin\Debug\DAL.pdb
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\bin\Debug\DAL.xml
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\obj\Debug\BLL.vbprojResolveAssemblyReference.cache
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\obj\Debug\BLL.Resources.resources
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\obj\Debug\BLL.vbproj.GenerateResource.Cache
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\obj\Debug\BLL.dll
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\obj\Debug\BLL.xml
+C:\Users\Luchi\Desktop\CAMPO\WindowsApplication1\BLL\obj\Debug\BLL.pdb
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\obj\Debug\BLL.vbprojResolveAssemblyReference.cache
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\obj\Debug\BLL.Resources.resources
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\obj\Debug\BLL.vbproj.GenerateResource.Cache
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\obj\Debug\BLL.dll
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\obj\Debug\BLL.xml
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\obj\Debug\BLL.pdb
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\bin\Debug\BLL.dll
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\bin\Debug\BLL.pdb
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\bin\Debug\BLL.xml
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\bin\Debug\BE.dll
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\bin\Debug\DAL.dll
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\bin\Debug\BE.pdb
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\bin\Debug\BE.xml
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\bin\Debug\DAL.pdb
+C:\Users\Luchi\Desktop\CAMPO\ABM cliente\BLL\bin\Debug\DAL.xml
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\bin\Debug\BLL.dll
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\bin\Debug\BLL.pdb
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\bin\Debug\BLL.xml
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\bin\Debug\BE.dll
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\bin\Debug\DAL.dll
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\bin\Debug\BE.pdb
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\bin\Debug\BE.xml
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\bin\Debug\DAL.pdb
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\bin\Debug\DAL.xml
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\obj\Debug\BLL.vbprojResolveAssemblyReference.cache
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\obj\Debug\BLL.Resources.resources
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\obj\Debug\BLL.vbproj.GenerateResource.Cache
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\obj\Debug\BLL.dll
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\obj\Debug\BLL.xml
+C:\Users\Luchi\Desktop\CAMPO\Sistema S.O.S belleza\BLL\obj\Debug\BLL.pdb
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\bin\Debug\BLL.dll
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\bin\Debug\BLL.pdb
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\bin\Debug\BLL.xml
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\bin\Debug\BE.dll
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\bin\Debug\DAL.dll
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\bin\Debug\BE.pdb
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\bin\Debug\BE.xml
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\bin\Debug\DAL.pdb
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\bin\Debug\DAL.xml
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\obj\Debug\BLL.vbprojResolveAssemblyReference.cache
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\obj\Debug\BLL.Resources.resources
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\obj\Debug\BLL.vbproj.GenerateResource.Cache
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\obj\Debug\BLL.dll
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\obj\Debug\BLL.xml
+C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\obj\Debug\BLL.pdb
