@@ -58,3 +58,18 @@ C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\obj\Debug\BLL.vbproj.Gene
 C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\obj\Debug\BLL.dll
 C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\obj\Debug\BLL.xml
 C:\Users\Navegador\Downloads\Sistema S.O.S belleza\BLL\obj\Debug\BLL.pdb
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\bin\Debug\BLL.dll
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\bin\Debug\BLL.pdb
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\bin\Debug\BLL.xml
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\bin\Debug\BE.dll
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\bin\Debug\DAL.dll
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\bin\Debug\BE.pdb
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\bin\Debug\BE.xml
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\bin\Debug\DAL.pdb
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\bin\Debug\DAL.xml
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\obj\Debug\BLL.vbprojResolveAssemblyReference.cache
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\obj\Debug\BLL.Resources.resources
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\obj\Debug\BLL.vbproj.GenerateResource.Cache
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\obj\Debug\BLL.dll
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\obj\Debug\BLL.xml
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\BLL\obj\Debug\BLL.pdb

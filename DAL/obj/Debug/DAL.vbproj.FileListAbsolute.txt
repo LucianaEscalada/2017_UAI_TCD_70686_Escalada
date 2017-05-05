@@ -46,3 +46,15 @@ C:\Users\Navegador\Downloads\Sistema S.O.S belleza\DAL\obj\Debug\DAL.vbproj.Gene
 C:\Users\Navegador\Downloads\Sistema S.O.S belleza\DAL\obj\Debug\DAL.dll
 C:\Users\Navegador\Downloads\Sistema S.O.S belleza\DAL\obj\Debug\DAL.xml
 C:\Users\Navegador\Downloads\Sistema S.O.S belleza\DAL\obj\Debug\DAL.pdb
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\bin\Debug\DAL.dll
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\bin\Debug\DAL.pdb
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\bin\Debug\DAL.xml
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\bin\Debug\BE.dll
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\bin\Debug\BE.pdb
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\bin\Debug\BE.xml
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\obj\Debug\DAL.vbprojResolveAssemblyReference.cache
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\obj\Debug\DAL.Resources.resources
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\obj\Debug\DAL.vbproj.GenerateResource.Cache
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\obj\Debug\DAL.dll
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\obj\Debug\DAL.xml
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\obj\Debug\DAL.pdb

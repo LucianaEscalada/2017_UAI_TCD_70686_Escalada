@@ -8,9 +8,17 @@ Public Class GrupoPatenteDAL
     Private Shared Function CargarDTO(pgrupopatente As grupopatente, pRow As DataRow) As grupopatente
         pgrupopatente.id = pRow("grupopatente_id")
         pgrupopatente.nombre = pRow("Nombre")
-        pgrupopatente.formulario = pRow("formulario")
-        pgrupopatente.padre = pRow("padre")
+        If TypeOf (pRow("formulario")) Is DBNull Then
+            pgrupopatente.formulario = ""
+        Else
+            pgrupopatente.formulario = pRow("Formulario")
+        End If
 
+        If TypeOf (pRow("padre")) Is DBNull Then
+            pgrupopatente.padre = 0
+        Else
+            pgrupopatente.padre = pRow("padre")
+        End If
         Return pgrupopatente
     End Function
 
@@ -78,8 +86,8 @@ Public Class GrupoPatenteDAL
     End Sub
 
 
-    Public Shared Function ListarCliente() As List(Of grupopatente)
-        Dim mLista As New List(Of grupopatente)
+    Public Shared Function Listar() As List(Of PatenteAbstracta)
+        Dim mLista As New List(Of PatenteAbstracta)
         Dim mCommand As String = "SELECT grupopatente_id, Nombre, formulario, padre FROM grupopatente"
         Dim mDataSet As DataSet
 
@@ -88,7 +96,7 @@ Public Class GrupoPatenteDAL
 
             If Not IsNothing(mDataSet) And mDataSet.Tables.Count > 0 And mDataSet.Tables(0).Rows.Count > 0 Then
                 For Each mRow As DataRow In mDataSet.Tables(0).Rows
-                    Dim mgrupopatente As New grupopatente
+                    Dim mgrupopatente As New GrupoPatente
 
                     mgrupopatente = CargarDTO(mgrupopatente, mRow)
 

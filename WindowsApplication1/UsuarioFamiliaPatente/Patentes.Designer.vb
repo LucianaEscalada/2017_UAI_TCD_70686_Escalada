@@ -31,6 +31,7 @@ Partial Class Patentes
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.IngresarPatenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IngresarGrupoPatenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tableLayoutPanel1.SuspendLayout()
         Me.panel1.SuspendLayout()
         Me.tableLayoutPanel2.SuspendLayout()
@@ -132,7 +133,7 @@ Partial Class Patentes
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IngresarPatenteToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IngresarPatenteToolStripMenuItem, Me.IngresarGrupoPatenteToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(488, 24)
@@ -144,6 +145,12 @@ Partial Class Patentes
         Me.IngresarPatenteToolStripMenuItem.Name = "IngresarPatenteToolStripMenuItem"
         Me.IngresarPatenteToolStripMenuItem.Size = New System.Drawing.Size(104, 20)
         Me.IngresarPatenteToolStripMenuItem.Text = "Ingresar Patente"
+        '
+        'IngresarGrupoPatenteToolStripMenuItem
+        '
+        Me.IngresarGrupoPatenteToolStripMenuItem.Name = "IngresarGrupoPatenteToolStripMenuItem"
+        Me.IngresarGrupoPatenteToolStripMenuItem.Size = New System.Drawing.Size(140, 20)
+        Me.IngresarGrupoPatenteToolStripMenuItem.Text = "Ingresar Grupo Patente"
         '
         'Patentes
         '
@@ -173,4 +180,5 @@ Partial Class Patentes
     Private WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents IngresarPatenteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents IngresarGrupoPatenteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

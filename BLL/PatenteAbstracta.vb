@@ -16,12 +16,13 @@ Public MustInherit Class PatenteAbstracta
         End Set
     End Property
 
+    Public MustOverride Function listar() As List(Of PatenteAbstracta)
 
 
-    Public MustOverride Sub MostrarEnTreeview(ByRef padres As TreeNodeCollection)
+    Public MustOverride Function MostrarEnTreeView(pTreeView As Windows.Forms.TreeView) As Windows.Forms.TreeView
     Public MustOverride Sub Alta()
     Public MustOverride Sub baja()
-    Public MustOverride Function Clone() As PatenteAbstracta
+    'Public MustOverride Function Clone() As PatenteAbstracta
 
 
 End Class

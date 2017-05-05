@@ -10,8 +10,8 @@ Public Class Familia
         InitializeComponent()
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-        Me.family.PatenteAbstracta = modelo.GetInstance().PatenteRaiz.Clone()
-        Me.family.PatenteAbstracta.MostrarEnTreeview(Me.treePatentes.Nodes)
+        ' Me.family.PatenteAbstracta = modelo.GetInstance().PatenteRaiz.Clone()
+        Me.family.PatenteAbstracta.MostrarEnTreeView(Me.treePatentes)
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click

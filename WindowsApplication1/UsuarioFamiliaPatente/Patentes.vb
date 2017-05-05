@@ -9,13 +9,25 @@ Public Class Patentes
         '
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-        BLL.modelo.GetInstance().PatenteRaiz.MostrarEnTreeview(Me.treePatentes.Nodes)
+        BLL.modelo.GetInstance().PatenteRaiz.MostrarEnTreeView(Me.treePatentes)
     End Sub
 
 
-
+    Property GrupoPatente As New GrupoPatente
 
     Private Sub Patentes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim mlistarpatente As New BLL.Patente
+        Dim mlistapatentes As New List(Of PatenteAbstracta)
+        mlistapatentes = mlistarpatente.listar
+        Dim mlistagrupopatente As New BLL.GrupoPatente
+        mlistapatentes.AddRange(mlistagrupopatente.listar)
+  
+
+        For Each mgrupopatente As BLL.GrupoPatente In mlistagrupopatente.listar
+            mgrupopatente.MostrarEnTreeView(treePatentes)
+
+        Next
+
 
     End Sub
 
@@ -23,6 +35,8 @@ Public Class Patentes
         Dim nodo As TreeNode = Me.treePatentes.SelectedNode
 
         If TypeOf nodo.Tag Is GrupoPatente Then
+            Dim formNuevaPatente As New DialogoPatentes
+            formNuevaPatente.ShowDialog()
 
             Dim padre As GrupoPatente = nodo.Tag
 
@@ -43,12 +57,13 @@ Public Class Patentes
                 nodoNuevo.Tag = patente
                 mpatente.nombrePatente = DialogoPatentes.Nombre
                 mpatente.formulario = DialogoPatentes.Formulario
-                mpatente.Alta()
+                patente.Alta()
                 nodo.Nodes.Add(nodoNuevo)
-                padre.Patentes.Add(patente)
+                padre.Patentes.Add(mpatente)
             End If
         End If
     End Sub
+
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
 
@@ -56,5 +71,28 @@ Public Class Patentes
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         Me.Close()
+    End Sub
+
+
+
+    Private Sub IngresarGrupoPatenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresarGrupoPatenteToolStripMenuItem.Click
+        Dim vSNode As TreeNode = treePatentes.SelectedNode
+        If TypeOf vSNode.Tag Is GrupoPatente Then
+            Dim vPadre As GrupoPatente = vSNode.Tag
+            Dim vNombre As String = InputBox("Ingrese el nombre del Grupo: ")
+            If vNombre.Length > 0 Then
+                Dim vNNode As New TreeNode
+                vNNode.Text = vNombre
+                GrupoPatente.nombrePatente = vNombre
+                vNNode.Tag = GrupoPatente
+                vSNode.Nodes.Add(vNNode)
+                vPadre.Patentes.Add(GrupoPatente)
+                GrupoPatente.padre = vPadre.id
+                GrupoPatente.Alta()
+                treePatentes.Nodes.Clear()
+                Patentes_Load(Nothing, Nothing)
+                treePatentes.ExpandAll()
+            End If
+        End If
     End Sub
 End Class

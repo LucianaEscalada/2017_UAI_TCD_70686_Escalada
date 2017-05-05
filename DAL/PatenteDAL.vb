@@ -2,11 +2,20 @@
 Public Class PatenteDAL
 
 
-    Private Shared Function CargarDTO(Ppatente As patente, pRow As DataRow) As patente
+    Private Shared Function Cargarbe(Ppatente As patente, pRow As DataRow) As patente
         Ppatente.id = pRow("patente_id")
         Ppatente.nombre = pRow("Nombre")
-        Ppatente.formulario = pRow("Formulario")
-        Ppatente.padre = pRow("padre")
+        If TypeOf (pRow("formulario")) Is DBNull Then
+            Ppatente.formulario = ""
+        Else
+            Ppatente.formulario = pRow("Formulario")
+        End If
+
+        If TypeOf (pRow("padre")) Is DBNull Then
+            Ppatente.padre = 0
+        Else
+            Ppatente.padre = pRow("padre")
+        End If
         Return Ppatente
     End Function
 
@@ -23,7 +32,7 @@ Public Class PatenteDAL
             Dim mDataSet As DataSet = BD.ExecuteDataSet(mCommand)
 
             If Not IsNothing(mDataSet) And mDataSet.Tables.Count > 0 And mDataSet.Tables(0).Rows.Count > 0 Then
-                Mpatente = CargarDTO(Mpatente, mDataSet.Tables(0).Rows(0))
+                Mpatente = Cargarbe(Mpatente, mDataSet.Tables(0).Rows(0))
                 Return Mpatente
             Else
                 Return Nothing
@@ -38,7 +47,7 @@ Public Class PatenteDAL
 
     Public Shared Sub GuardarNuevo(Ppatente As BE.PatenteAbstracta)
         'el iif es un if en una sola linea, si la condicion que le pongo al principio es verdadera voy al null, si no pasa el valor que tenga el padre
-        Dim mCommand As String = "INSERT INTO patente(patente_id, nombre, formulario, padre) VALUES (" & Ppatente.id & ", '" & Ppatente.nombre & "' , '" & Ppatente.formulario & "' , " & IIf(Ppatente.padre = 0, "Null", Ppatente.padre) & ");"
+        Dim mCommand As String = "INSERT INTO patente (nombre, formulario, padre) VALUES ('" & Ppatente.nombre & "' , '" & Ppatente.formulario & "' , " & IIf(Ppatente.padre = 0, "Null", Ppatente.padre) & ");"
 
         Try
             BD.ExecuteNonQuery(mCommand)
@@ -78,8 +87,8 @@ Public Class PatenteDAL
     End Sub
 
 
-    Public Shared Function Listar() As List(Of BE.PatenteAbstracta)
-        Dim mLista As New List(Of BE.PatenteAbstracta)
+    Public Shared Function Listar() As List(Of BE.patente)
+        Dim mLista As New List(Of BE.patente)
         Dim mCommand As String = "SELECT patente_id, Nombre, formulario, padre FROM patente"
         Dim mDataSet As DataSet
 
@@ -90,7 +99,7 @@ Public Class PatenteDAL
                 For Each mRow As DataRow In mDataSet.Tables(0).Rows
                     Dim Mpatente As New patente
 
-                    Mpatente = CargarDTO(Mpatente, mRow)
+                    Mpatente = Cargarbe(Mpatente, mRow)
 
                     mLista.Add(Mpatente)
                 Next
