@@ -48,7 +48,7 @@ Public Class GrupoPatenteDAL
         Dim mCommand As String = ""
 
 
-        mCommand = "INSERT INTO patente(nombre, formulario, padre) " &
+        mCommand = "INSERT INTO grupopatente(nombre, formulario, padre) " &
                     "VALUES ('" & pgrupopatente.nombre & "' , '" & pgrupopatente.formulario & "' , " & pgrupopatente.padre & ");"
 
         Try
