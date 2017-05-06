@@ -46,32 +46,49 @@ Public Class PatenteDAL
 
 
     Public Shared Sub GuardarNuevo(Ppatente As BE.PatenteAbstracta)
-        'el iif es un if en una sola linea, si la condicion que le pongo al principio es verdadera voy al null, si no pasa el valor que tenga el padre
-        Dim mCommand As String = "INSERT INTO patente (nombre, formulario, padre) VALUES ('" & Ppatente.nombre & "' , '" & Ppatente.formulario & "' , " & IIf(Ppatente.padre = 0, "Null", Ppatente.padre) & ");"
+        Dim mCommand As String = ""
+
+
+        mCommand = "INSERT INTO patente(Patente_id, nombre, formulario, padre) " & _
+                    "VALUES (" & Ppatente.id & ", '" & Ppatente.nombre & "' , '" & Ppatente.formulario & "' , " & Ppatente.padre & ");"
 
         Try
             BD.ExecuteNonQuery(mCommand)
         Catch ex As Exception
-            MsgBox("Error - Nuevo - patente")
+            MsgBox("Error - Nuevo - PatenteDAL")
             MsgBox(ex.Message)
         End Try
+
+       
     End Sub
-
-
     Public Shared Sub GuardarModificacion(Ppatente As BE.PatenteAbstracta)
-        Dim mCommand As String = "UPDATE patente SET " & _
-                                 "patente_id = " & Ppatente.id & _
-                                 ", Nombre = '" & Ppatente.nombre & _
-                                 "', Formulario = '" & Ppatente.formulario & _
-                                 "', padre= " & Ppatente.padre & _
-                                  " WHERE patente_id = " & Ppatente.id
+        Dim mCommand As String = ""
+
+        If TypeOf (Ppatente) Is BE.patente Then
+            mCommand = "UPDATE Patente SET " &
+                                                        "patente_id = " & Ppatente.id & _
+                                     ", Nombre = '" & Ppatente.nombre & _
+                                     "', Formulario = '" & Ppatente.formulario & _
+                                     "', padre= " & Ppatente.padre & _
+                                      " WHERE patente_id = " & Ppatente.id
+        ElseIf TypeOf (Ppatente) Is BE.GrupoPatente Then
+            mCommand = "UPDATE Permiso SET " &
+                                     "patente_id = " & Ppatente.id & _
+                                     ", Nombre = '" & Ppatente.nombre & _
+                                     "', Formulario = '" & Ppatente.formulario & _
+                                     "', padre= " & Ppatente.padre & _
+                                      " WHERE patente_id = " & Ppatente.id
+
+        End If
 
         Try
             BD.ExecuteNonQuery(mCommand)
         Catch ex As Exception
-            MsgBox("Error - Modificacion - patenteDAL")
+            MsgBox("Error - Modificacion - PatenteDAL")
             MsgBox(ex.Message)
         End Try
+
+
     End Sub
 
 
@@ -87,10 +104,16 @@ Public Class PatenteDAL
     End Sub
 
 
-    Public Shared Function Listar() As List(Of BE.patente)
+    Public Shared Function Listar(Optional pgrupopatente As Boolean = False, Optional pPadreID As Integer = -1) As List(Of BE.patente)
         Dim mLista As New List(Of BE.patente)
-        Dim mCommand As String = "SELECT patente_id, Nombre, formulario, padre FROM patente"
+        Dim mCommand As String = " "
         Dim mDataSet As DataSet
+
+        If pPadreID <> -1 Then
+            mCommand = "SELECT Patente_id, nombre, formulario, padre FROM Patente WHERE padre = " & pPadreID
+        Else
+            mCommand = "SELECT Patente_id, nombre, formulario, padre FROM Permiso"
+        End If
 
         Try
             mDataSet = BD.ExecuteDataSet(mCommand)
@@ -114,6 +137,5 @@ Public Class PatenteDAL
             Return Nothing
         End Try
     End Function
-
 
 End Class

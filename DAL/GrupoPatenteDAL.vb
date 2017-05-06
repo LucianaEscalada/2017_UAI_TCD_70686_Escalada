@@ -5,7 +5,7 @@ Public Class GrupoPatenteDAL
         Return BD.ExecuteScalar("Select isnull (max(grupopatente_id), 0) from grupopatente")
     End Function
 
-    Private Shared Function CargarDTO(pgrupopatente As grupopatente, pRow As DataRow) As grupopatente
+    Private Shared Function CargarDTO(pgrupopatente As GrupoPatente, pRow As DataRow) As GrupoPatente
         pgrupopatente.id = pRow("grupopatente_id")
         pgrupopatente.nombre = pRow("Nombre")
         If TypeOf (pRow("formulario")) Is DBNull Then
@@ -45,18 +45,22 @@ Public Class GrupoPatenteDAL
 
 
     Public Shared Sub GuardarNuevo(pgrupopatente As grupopatente)
-        Dim mCommand As String = "INSERT INTO grupopatente(grupopatente_id, nombre, formulario, padre) VALUES (" & pgrupopatente.id & ", '" & pgrupopatente.nombre & "', " & IIf(pgrupopatente.padre = 0, "NULL", pgrupopatente.padre) & ");"
+        Dim mCommand As String = ""
+
+
+        mCommand = "INSERT INTO patente(Patente_id, nombre, formulario, padre) " & _
+                    "VALUES (" & pgrupopatente.id & ", '" & pgrupopatente.nombre & "' , '" & pgrupopatente.formulario & "' , " & pgrupopatente.padre & ");"
 
         Try
             BD.ExecuteNonQuery(mCommand)
         Catch ex As Exception
-            MsgBox("Error - Nuevo - grupopatente")
+            MsgBox("Error - Nuevo - PermisoDAL")
             MsgBox(ex.Message)
         End Try
     End Sub
 
 
-    Public Shared Sub GuardarModificacion(pgrupopatente As grupopatente)
+    Public Shared Sub GuardarModificacion(pgrupopatente As GrupoPatente)
         Dim mCommand As String = "UPDATE grupopatente SET " & _
                                  "grupopatente_id = " & pgrupopatente.id & _
                                  ", Nombre = '" & pgrupopatente.nombre & _
@@ -74,7 +78,7 @@ Public Class GrupoPatenteDAL
     End Sub
 
 
-    Public Shared Sub Eliminar(pgrupopatente As grupopatente)
+    Public Shared Sub Eliminar(pgrupopatente As GrupoPatente)
         Dim mCommand As String = "DELETE FROM datoscliente WHERE grupopatente_id = " & pgrupopatente.id
 
         Try
@@ -86,21 +90,27 @@ Public Class GrupoPatenteDAL
     End Sub
 
 
-    Public Shared Function Listar() As List(Of PatenteAbstracta)
-        Dim mLista As New List(Of PatenteAbstracta)
-        Dim mCommand As String = "SELECT grupopatente_id, Nombre, formulario, padre FROM grupopatente"
+    Public Shared Function Listar(Optional pPadreID As Integer = -1)
+        Dim mLista As New List(Of BE.GrupoPatente)
+        Dim mCommand As String = " "
         Dim mDataSet As DataSet
+
+        If pPadreID <> -1 Then
+            mCommand = "SELECT grupopatente_id, nombre, formulario, padre FROM grupopatente WHERE padre = " & pPadreID
+        Else
+            mCommand = "SELECT grupopatente_id, nombre, formulario, padre FROM grupopatente"
+        End If
 
         Try
             mDataSet = BD.ExecuteDataSet(mCommand)
 
             If Not IsNothing(mDataSet) And mDataSet.Tables.Count > 0 And mDataSet.Tables(0).Rows.Count > 0 Then
                 For Each mRow As DataRow In mDataSet.Tables(0).Rows
-                    Dim mgrupopatente As New GrupoPatente
+                    Dim Mgrupopatente As New GrupoPatente
 
-                    mgrupopatente = CargarDTO(mgrupopatente, mRow)
+                    Mgrupopatente = CargarDTO(Mgrupopatente, mRow)
 
-                    mLista.Add(mgrupopatente)
+                    mLista.Add(Mgrupopatente)
                 Next
 
                 Return mLista
@@ -108,7 +118,7 @@ Public Class GrupoPatenteDAL
                 Return Nothing
             End If
         Catch ex As Exception
-            MsgBox("Error - Listar - grupopatenteDAL")
+            MsgBox("Error - Listar - patenteDAL")
             MsgBox(ex.Message)
             Return Nothing
         End Try
