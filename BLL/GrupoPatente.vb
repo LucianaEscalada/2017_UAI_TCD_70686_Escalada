@@ -4,9 +4,6 @@ Public Class GrupoPatente
     Inherits BLL.PatenteAbstracta
 
 
-
-
-
     Private Sub cargarBE(ppatente As BE.PatenteAbstracta)
         ppatente.id = Me.id
         ppatente.nombre = Me.nombrePatente
@@ -57,38 +54,44 @@ Public Class GrupoPatente
 
     End Sub
 
-
-    Public Overrides Function MostrarEnTreeView(pTreeView As TreeView) As TreeView
+    Public Overrides Function MostrarEnTreeview(pTreeView As TreeView) As TreeView
         Try
-            Dim mListaGrupoPatente As New List(Of BE.PatenteAbstracta)
-            mListaGrupoPatente = GrupoPatenteDAL.Listar
-            Dim vNode As TreeNode = pTreeView.Nodes.Add(mListaGrupoPatente.Item(0).nombre)
-            vNode.Tag = mListaGrupoPatente.Item(0)
-            Dim mbe As New BE.GrupoPatente
-            cargarBE(vNode.Tag)
-            AgregarHijos(mbe, vNode)
+            Dim mListaPermisos As List(Of BLL.PatenteAbstracta) = listar()
+
+           
+            Dim mNode As TreeNode = pTreeView.Nodes.Add(mListaPermisos.Item(0).nombrePatente)
+            mNode.Tag = mListaPermisos.Item(0)
+
+            AgregarHijos(mNode.Tag, mNode)
         Catch ex As Exception
 
         End Try
+
         Return pTreeView
     End Function
 
-    Private Sub AgregarHijos(pPadre As BE.GrupoPatente, pTreeNode As TreeNode)
-        For Each PAbstracta As BE.PatenteAbstracta In pPadre.listapatentes
-            Dim vNode As New TreeNode
-            vNode.Text = PAbstracta.nombre
-            vNode.Tag = PAbstracta
-            pTreeNode.Nodes.Add(vNode)
-            If TypeOf PAbstracta Is BE.GrupoPatente Then
-                vNode.Text = PAbstracta.nombre
-                Dim vGPatente As BE.GrupoPatente
-                vGPatente = DirectCast(PAbstracta, BE.GrupoPatente)
-                If Not vGPatente.listapatentes Is Nothing Then
-                    AgregarHijos(vGPatente, pTreeNode.LastNode)
+    Private Sub AgregarHijos(pPadre As BLL.GrupoPatente, pTreeNode As TreeNode)
+        For Each mPermisoAbstracto As BLL.PatenteAbstracta In pPadre.listar
+            Dim mNode As New TreeNode
+            mNode.Text = mPermisoAbstracto.nombrePatente
+            mNode.Tag = mPermisoAbstracto
+            pTreeNode.Nodes.Add(mNode)
+
+            If TypeOf (mPermisoAbstracto) Is BLL.GrupoPatente Then
+                'mNode.Text = mPermisoAbstracto.Nombre
+
+                Dim mPermisoCompuesto As BLL.GrupoPatente
+                mPermisoCompuesto = DirectCast(mPermisoAbstracto, GrupoPatente)
+
+                If mPermisoCompuesto.listar.Count > 0 Then
+                    AgregarHijos(mPermisoCompuesto, pTreeNode.LastNode)
                 End If
             End If
         Next
+
     End Sub
+
+
 
     'Public Overrides Function Clone() As PatenteAbstracta
     '    Dim pat As New BLL.GrupoPatente
@@ -101,14 +104,21 @@ Public Class GrupoPatente
     '    Return pat
     'End Function
 
-    Public Overrides Function listar() As List(Of PatenteAbstracta)
-        Dim mlista As New List(Of BLL.PatenteAbstracta)
-        Dim mlistabe As List(Of BE.patente) = PatenteDAL.Listar
-        For Each mpatente As BE.patente In mlistabe
-            Dim ppatente As New BLL.Patente(mpatente.id)
-            mlista.Add(ppatente)
-        Next
+    Public Overrides Function listar() As List(Of BLL.PatenteAbstracta)
 
+
+        Dim mlista As New List(Of BLL.PatenteAbstracta)
+        Dim mlistabe As List(Of BE.PatenteAbstracta) = GrupoPatenteDAL.Listar
+
+        If Not IsNothing(mlistabe) Then
+            For Each mpatente As BE.PatenteAbstracta In mlistabe
+                If TypeOf (mpatente) Is BE.GrupoPatente Then
+                    Dim ppatente As New BLL.Patente(mpatente.id)
+                    mlista.Add(ppatente)
+                End If
+
+            Next
+        End If
         Return mlista
     End Function
 End Class

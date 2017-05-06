@@ -16,8 +16,6 @@ Public Class Patente
 
 
 
-
-
     Private Sub cargarBE(ppatente As BE.PatenteAbstracta)
         ' ppatente.id = Me.id
         ppatente.nombre = Me.nombrePatente
@@ -43,10 +41,11 @@ Public Class Patente
     End Function
 
     Public Overrides Sub Alta()
+   
         Dim mBE As New BE.GrupoPatente
         If Me.id = 0 Then
 
-            '  Me.id = PatenteDAL.proximoID
+            Me.id = PatenteDAL.proximoID
             cargarBE(mBE)
             PatenteDAL.GuardarNuevo(mBE)
         Else
@@ -62,13 +61,18 @@ Public Class Patente
     End Sub
 
     Public Overrides Function listar() As List(Of PatenteAbstracta)
+
         Dim mlista As New List(Of BLL.PatenteAbstracta)
         Dim mlistabe As List(Of BE.patente) = PatenteDAL.Listar
-        For Each mpatente As BE.patente In mlistabe
-            Dim ppatente As New BLL.Patente(mpatente.id)
 
-        Next
+        If Not IsNothing(mlistabe) Then
+            For Each mpatente As BE.PatenteAbstracta In mlistabe
+                If TypeOf (mpatente) Is BE.patente Then
+                    Dim ppatente As New BLL.Patente(mpatente.id)
+                End If
 
+            Next
+        End If
         Return mlista
 
     End Function
