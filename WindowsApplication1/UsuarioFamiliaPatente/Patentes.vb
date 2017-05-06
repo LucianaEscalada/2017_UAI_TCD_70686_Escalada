@@ -1,69 +1,57 @@
 ﻿Imports BLL
 Public Class Patentes
-
-    Public Sub New()
-
-        ' Llamada necesaria para el diseñador.
-        InitializeComponent()
-
-        '
-
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-        BLL.modelo.GetInstance().PatenteRaiz.MostrarEnTreeView(Me.treePatentes)
-    End Sub
-
-
-    Property GrupoPatente As New GrupoPatente
+    'Property GrupoPatente As New GrupoPatente
 
     Private Sub Patentes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim mlistarpatente As New BLL.Patente
-        Dim mlistapatentes As New List(Of PatenteAbstracta)
-        mlistapatentes = mlistarpatente.listar
-        Dim mlistagrupopatente As New BLL.GrupoPatente
-        mlistapatentes.AddRange(mlistagrupopatente.listar)
-  
-
-        For Each mgrupopatente As BLL.GrupoPatente In mlistagrupopatente.listar
-            mgrupopatente.MostrarEnTreeView(treePatentes)
-
-        Next
+        'Dim mlistarpatente As New BLL.Patente
+        'Dim mlistapatentes As New List(Of PatenteAbstracta)
+        'mlistapatentes = mlistarpatente.listar
+        'Dim mlistagrupopatente As New BLL.GrupoPatente
+        'mlistapatentes.AddRange(mlistagrupopatente.listar)
 
 
+        'For Each mgrupopatente As BLL.GrupoPatente In mlistagrupopatente.listar
+        '    mgrupopatente.MostrarEnTreeView(treePatentes)
+
+        'Next
+
+        Dim mPermisoRaiz As New GrupoPatente(0)
+        mPermisoRaiz.MostrarEnTreeview(treePatentes)
     End Sub
 
     Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
-        Dim mNodo As TreeNode = Me.treePatentes.SelectedNode
+        Dim mSelectedNode As TreeNode = Me.treePatentes.SelectedNode
 
-        If TypeOf mNodo.Tag Is BLL.GrupoPatente Then
+        If TypeOf mSelectedNode.Tag Is BLL.GrupoPatente Then
 
-            Dim mPadre As BLL.GrupoPatente = mNodo.Tag
+            Dim mPadre As BLL.GrupoPatente = mSelectedNode.Tag
 
             Dim mForm As New DialogoPatentes
             mForm.ShowDialog()
 
-            Dim mnombrepatente As String = mForm.Nombre
+            Dim mNombrePermiso As String = mForm.Nombre
             Dim mNombreFormulario As String = mForm.Formulario
 
-            If (mnombrepatente.Length > 0) And (mNombreFormulario.Length > 0) Then
+            If (mNombrePermiso.Length > 0) And (mNombreFormulario.Length > 0) Then
 
-                Dim mpatente As New BLL.Patente
+                Dim mPermiso As New BLL.Patente
                 Dim mNodoNuevo As New TreeNode
 
-                mNodoNuevo.Text = mnombrepatente
+                mNodoNuevo.Text = mNombrePermiso
 
-                mpatente.nombrePatente = mForm.Nombre
-                mpatente.formulario = mForm.Formulario
+                mPermiso.nombrePatente = mNombrePermiso
+                mPermiso.Formulario = mNombreFormulario
+                mPermiso.Padre = mPadre.id
 
-                mpatente.Alta()
+                mPermiso.Alta()
 
-                mNodoNuevo.Tag = mpatente
+                mNodoNuevo.Tag = mPermiso
 
-                mNodo.Nodes.Add(mNodoNuevo)
-                mPadre.listar.Add(mpatente)
+                mSelectedNode.Nodes.Add(mNodoNuevo)
+                mPadre.Patentes.Add(mPermiso)
             End If
         End If
-
 
     End Sub
 
@@ -79,20 +67,27 @@ Public Class Patentes
 
 
     Private Sub IngresarGrupoPatenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresarGrupoPatenteToolStripMenuItem.Click
-        Dim vSNode As TreeNode = treePatentes.SelectedNode
-        If TypeOf vSNode.Tag Is BLL.GrupoPatente Then
-            Dim vPadre As BLL.GrupoPatente = vSNode.Tag
-            Dim vNombre As String = InputBox("Ingrese el nombre del Grupo: ")
-            If vNombre.Length > 0 Then
-                Dim vNNode As New TreeNode
-                vNNode.Text = vNombre
-                GrupoPatente.nombrePatente = vNombre
-                vNNode.Tag = GrupoPatente
-                vSNode.Nodes.Add(vNNode)
-                vPadre.listar.Add(GrupoPatente)
-                GrupoPatente.padre = vPadre.id
-                GrupoPatente.alta()
+        Dim mSelectedNode As TreeNode = treePatentes.SelectedNode
+
+        If TypeOf mSelectedNode.Tag Is BLL.GrupoPatente Then
+            Dim mPadre As BLL.GrupoPatente = mSelectedNode.Tag
+            Dim mNombrePermiso As String = InputBox("Ingrese el nombre del Permiso: ")
+
+            If mNombrePermiso.Length > 0 Then
+                Dim mPermisoCompuesto As New BLL.GrupoPatente
+                mPermisoCompuesto.nombrePatente = mNombrePermiso
+                mPermisoCompuesto.Padre = mPadre.ID
+
+                Dim mNodoNuevo As New TreeNode
+                mNodoNuevo.Text = mNombrePermiso
+                mNodoNuevo.Tag = mPermisoCompuesto
+
+                mSelectedNode.Nodes.Add(mNodoNuevo)
+                mPadre.Patentes.Add(mPermisoCompuesto)
+
+                mPermisoCompuesto.Alta()
                 treePatentes.Nodes.Clear()
+
                 Patentes_Load(Nothing, Nothing)
                 treePatentes.ExpandAll()
             End If

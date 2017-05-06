@@ -48,13 +48,13 @@ Public Class GrupoPatenteDAL
         Dim mCommand As String = ""
 
 
-        mCommand = "INSERT INTO patente(Patente_id, nombre, formulario, padre) " & _
-                    "VALUES (" & pgrupopatente.id & ", '" & pgrupopatente.nombre & "' , '" & pgrupopatente.formulario & "' , " & pgrupopatente.padre & ");"
+        mCommand = "INSERT INTO patente(nombre, formulario, padre) " &
+                    "VALUES ('" & pgrupopatente.nombre & "' , '" & pgrupopatente.formulario & "' , " & pgrupopatente.padre & ");"
 
         Try
             BD.ExecuteNonQuery(mCommand)
         Catch ex As Exception
-            MsgBox("Error - Nuevo - PermisoDAL")
+            MsgBox("Error - Nuevo - PatenteDAL")
             MsgBox(ex.Message)
         End Try
     End Sub
@@ -90,7 +90,7 @@ Public Class GrupoPatenteDAL
     End Sub
 
 
-    Public Shared Function Listar(Optional pPadreID As Integer = -1)
+    Public Shared Function Listar(Optional pPadreID As Integer = -1) As List(Of BE.GrupoPatente)
         Dim mLista As New List(Of BE.GrupoPatente)
         Dim mCommand As String = " "
         Dim mDataSet As DataSet

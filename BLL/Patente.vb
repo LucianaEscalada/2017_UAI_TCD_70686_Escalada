@@ -41,8 +41,8 @@ Public Class Patente
     End Function
 
     Public Overrides Sub Alta()
-   
-        Dim mBE As New BE.GrupoPatente
+
+        Dim mBE As New BE.patente
         If Me.id = 0 Then
 
             Me.id = PatenteDAL.proximoID
@@ -60,9 +60,9 @@ Public Class Patente
         PatenteDAL.Eliminar(mbe)
     End Sub
 
-    Public Overrides Function listar() As List(Of PatenteAbstracta)
+    Public Function listar() As List(Of Patente)
 
-        Dim mlista As New List(Of BLL.PatenteAbstracta)
+        Dim mlista As New List(Of BLL.Patente)
         Dim mlistabe As List(Of BE.patente) = PatenteDAL.Listar
 
         If Not IsNothing(mlistabe) Then

@@ -3,6 +3,15 @@ Imports System.Windows.Forms
 Public Class GrupoPatente
     Inherits BLL.PatenteAbstracta
 
+    Sub New()
+
+    End Sub
+
+    Sub New(pID As Integer)
+        CargarPropiedades(pID)
+        CargarHijos()
+    End Sub
+
 
     Private Sub cargarBE(ppatente As BE.PatenteAbstracta)
         ppatente.id = Me.id
@@ -12,7 +21,7 @@ Public Class GrupoPatente
     End Sub
 
     Private Sub CargarPropiedades(pid As Integer)
-        Dim mBE As BE.patente = PatenteDAL.Obtenerpatente(pid)
+        Dim mBE As BE.GrupoPatente = GrupoPatenteDAL.Obtenergrupopatente(pid)
 
         If Not IsNothing(mBE) Then
             Me.id = mBE.id
@@ -37,12 +46,12 @@ Public Class GrupoPatente
         Dim mBE As New BE.GrupoPatente
         If Me.id = 0 Then
 
-            Me.id = PatenteDAL.proximoID
+            Me.id = GrupoPatenteDAL.proximoID
             cargarBE(mBE)
-            PatenteDAL.GuardarNuevo(mBE)
+            GrupoPatenteDAL.GuardarNuevo(mBE)
         Else
             cargarBE(mBE)
-            PatenteDAL.GuardarModificacion(mBE)
+            GrupoPatenteDAL.GuardarModificacion(mBE)
         End If
 
     End Sub
@@ -56,9 +65,9 @@ Public Class GrupoPatente
 
     Public Overrides Function MostrarEnTreeview(pTreeView As TreeView) As TreeView
         Try
-            Dim mListaPermisos As List(Of BLL.PatenteAbstracta) = listar()
+            Dim mListaPermisos As List(Of BLL.GrupoPatente) = listar()
 
-           
+
             Dim mNode As TreeNode = pTreeView.Nodes.Add(mListaPermisos.Item(0).nombrePatente)
             mNode.Tag = mListaPermisos.Item(0)
 
@@ -71,7 +80,7 @@ Public Class GrupoPatente
     End Function
 
     Private Sub AgregarHijos(pPadre As BLL.GrupoPatente, pTreeNode As TreeNode)
-        For Each mPermisoAbstracto As BLL.PatenteAbstracta In pPadre.listar
+        For Each mPermisoAbstracto As BLL.PatenteAbstracta In pPadre.Patentes
             Dim mNode As New TreeNode
             mNode.Text = mPermisoAbstracto.nombrePatente
             mNode.Tag = mPermisoAbstracto
@@ -104,16 +113,16 @@ Public Class GrupoPatente
     '    Return pat
     'End Function
 
-    Public Overrides Function listar() As List(Of BLL.PatenteAbstracta)
+    Public Function listar() As List(Of BLL.GrupoPatente)
 
 
-        Dim mlista As New List(Of BLL.PatenteAbstracta)
-        Dim mlistabe As List(Of BE.PatenteAbstracta) = GrupoPatenteDAL.Listar
+        Dim mlista As New List(Of BLL.GrupoPatente)
+        Dim mlistabe As List(Of BE.GrupoPatente) = GrupoPatenteDAL.Listar
 
         If Not IsNothing(mlistabe) Then
-            For Each mpatente As BE.PatenteAbstracta In mlistabe
+            For Each mpatente As BE.GrupoPatente In mlistabe
                 If TypeOf (mpatente) Is BE.GrupoPatente Then
-                    Dim ppatente As New BLL.Patente(mpatente.id)
+                    Dim ppatente As New BLL.GrupoPatente(mpatente.id)
                     mlista.Add(ppatente)
                 End If
 
@@ -121,4 +130,24 @@ Public Class GrupoPatente
         End If
         Return mlista
     End Function
+
+
+    Private Sub CargarHijos()
+        Dim mListaCompuestos As List(Of BE.GrupoPatente) = GrupoPatenteDAL.Listar(Me.id)
+        Dim mListaSimples As List(Of BE.patente) = PatenteDAL.Listar(Me.id)
+
+        If Not IsNothing(mListaCompuestos) Then
+            For Each mPermisoAbs As BE.GrupoPatente In mListaCompuestos
+                Dim mPermisoBLL As New BLL.GrupoPatente(mPermisoAbs.id)
+                Me.Patentes.Add(mPermisoBLL)
+            Next
+        End If
+
+        If Not IsNothing(mListaSimples) Then
+            For Each mPermisoAbs As BE.patente In mListaSimples
+                Dim mPermisoBLL As New BLL.Patente(mPermisoAbs.id)
+                Me.Patentes.Add(mPermisoBLL)
+            Next
+        End If
+    End Sub
 End Class

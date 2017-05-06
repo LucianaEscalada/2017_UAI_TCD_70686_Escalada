@@ -16,7 +16,6 @@ Public MustInherit Class PatenteAbstracta
         End Set
     End Property
 
-    Public MustOverride Function listar() As List(Of PatenteAbstracta)
 
 
     Public MustOverride Function MostrarEnTreeView(pTreeView As Windows.Forms.TreeView) As Windows.Forms.TreeView

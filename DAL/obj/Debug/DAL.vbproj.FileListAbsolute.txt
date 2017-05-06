@@ -58,3 +58,15 @@ C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\obj\Debug\DAL.vbpro
 C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\obj\Debug\DAL.dll
 C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\obj\Debug\DAL.xml
 C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\DAL\obj\Debug\DAL.pdb
+C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\DAL\bin\Debug\DAL.dll
+C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\DAL\bin\Debug\DAL.pdb
+C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\DAL\bin\Debug\DAL.xml
+C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\DAL\bin\Debug\BE.dll
+C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\DAL\bin\Debug\BE.pdb
+C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\DAL\bin\Debug\BE.xml
+C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\DAL\obj\Debug\DAL.vbprojResolveAssemblyReference.cache
+C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\DAL\obj\Debug\DAL.Resources.resources
+C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\DAL\obj\Debug\DAL.vbproj.GenerateResource.Cache
+C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\DAL\obj\Debug\DAL.dll
+C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\DAL\obj\Debug\DAL.xml
+C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\DAL\obj\Debug\DAL.pdb

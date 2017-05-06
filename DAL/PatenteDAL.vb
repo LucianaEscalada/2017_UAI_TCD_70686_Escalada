@@ -44,13 +44,12 @@ Public Class PatenteDAL
         End Try
     End Function
 
-
-    Public Shared Sub GuardarNuevo(Ppatente As BE.PatenteAbstracta)
+    Public Shared Sub GuardarNuevo(Ppatente As BE.patente)
         Dim mCommand As String = ""
 
 
-        mCommand = "INSERT INTO patente(Patente_id, nombre, formulario, padre) " & _
-                    "VALUES (" & Ppatente.id & ", '" & Ppatente.nombre & "' , '" & Ppatente.formulario & "' , " & Ppatente.padre & ");"
+        mCommand = "INSERT INTO patente(nombre, formulario, padre) " &
+                    "VALUES ('" & Ppatente.nombre & "' , '" & Ppatente.formulario & "' , " & Ppatente.padre & ");"
 
         Try
             BD.ExecuteNonQuery(mCommand)
@@ -59,27 +58,17 @@ Public Class PatenteDAL
             MsgBox(ex.Message)
         End Try
 
-       
+
     End Sub
-    Public Shared Sub GuardarModificacion(Ppatente As BE.PatenteAbstracta)
+    Public Shared Sub GuardarModificacion(Ppatente As BE.patente)
         Dim mCommand As String = ""
 
-        If TypeOf (Ppatente) Is BE.patente Then
-            mCommand = "UPDATE Patente SET " &
-                                                        "patente_id = " & Ppatente.id & _
-                                     ", Nombre = '" & Ppatente.nombre & _
-                                     "', Formulario = '" & Ppatente.formulario & _
-                                     "', padre= " & Ppatente.padre & _
-                                      " WHERE patente_id = " & Ppatente.id
-        ElseIf TypeOf (Ppatente) Is BE.GrupoPatente Then
-            mCommand = "UPDATE Permiso SET " &
-                                     "patente_id = " & Ppatente.id & _
-                                     ", Nombre = '" & Ppatente.nombre & _
-                                     "', Formulario = '" & Ppatente.formulario & _
-                                     "', padre= " & Ppatente.padre & _
-                                      " WHERE patente_id = " & Ppatente.id
-
-        End If
+        mCommand = "UPDATE Patente SET " &
+                                                    "patente_id = " & Ppatente.id &
+                                 ", Nombre = '" & Ppatente.nombre &
+                                 "', Formulario = '" & Ppatente.formulario &
+                                 "', padre= " & Ppatente.padre &
+                                  " WHERE patente_id = " & Ppatente.id
 
         Try
             BD.ExecuteNonQuery(mCommand)
@@ -104,7 +93,7 @@ Public Class PatenteDAL
     End Sub
 
 
-    Public Shared Function Listar(Optional pgrupopatente As Boolean = False, Optional pPadreID As Integer = -1) As List(Of BE.patente)
+    Public Shared Function Listar(Optional pPadreID As Integer = -1) As List(Of BE.patente)
         Dim mLista As New List(Of BE.patente)
         Dim mCommand As String = " "
         Dim mDataSet As DataSet
@@ -112,7 +101,7 @@ Public Class PatenteDAL
         If pPadreID <> -1 Then
             mCommand = "SELECT Patente_id, nombre, formulario, padre FROM Patente WHERE padre = " & pPadreID
         Else
-            mCommand = "SELECT Patente_id, nombre, formulario, padre FROM Permiso"
+            mCommand = "SELECT Patente_id, nombre, formulario, padre FROM patente"
         End If
 
         Try
