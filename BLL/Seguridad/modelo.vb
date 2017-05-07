@@ -1,7 +1,7 @@
 ﻿Public Class modelo
 
 
-    'Esta clase se carga con todas las familias y todos los usuarios que tiene la clase (los guarda dentro de un grupo patente)
+    ''Esta clase se carga con todas las familias y todos los usuarios que tiene la clase (los guarda dentro de un grupo patente)
 
     Private Shared _instance As modelo
     Public Shared Function GetInstance() As modelo

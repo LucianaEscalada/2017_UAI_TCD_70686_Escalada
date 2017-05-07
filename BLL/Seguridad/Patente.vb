@@ -5,6 +5,13 @@ Public Class Patente
 
 
     Private _patentes As New List(Of BLL.PatenteAbstracta)
+    Private _mPatenteBE As BE.PatenteAbstracta
+
+    Sub New(mPatenteBE As BE.PatenteAbstracta)
+        ' TODO: Complete member initialization 
+        _mPatenteBE = mPatenteBE
+    End Sub
+
     Public Property Patentes() As List(Of BLL.PatenteAbstracta)
         Get
             Return _patentes

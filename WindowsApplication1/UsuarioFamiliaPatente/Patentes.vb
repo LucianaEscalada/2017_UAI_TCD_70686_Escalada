@@ -74,18 +74,18 @@ Public Class Patentes
             Dim mNombrePermiso As String = InputBox("Ingrese el nombre del Permiso: ")
 
             If mNombrePermiso.Length > 0 Then
-                Dim mPermisoCompuesto As New BLL.GrupoPatente
-                mPermisoCompuesto.nombrePatente = mNombrePermiso
-                mPermisoCompuesto.Padre = mPadre.ID
+                Dim mgrupopatente As New BLL.GrupoPatente
+                mgrupopatente.nombrePatente = mNombrePermiso
+                mgrupopatente.padre = mPadre.id
 
                 Dim mNodoNuevo As New TreeNode
                 mNodoNuevo.Text = mNombrePermiso
-                mNodoNuevo.Tag = mPermisoCompuesto
+                mNodoNuevo.Tag = mgrupopatente
 
                 mSelectedNode.Nodes.Add(mNodoNuevo)
-                mPadre.Patentes.Add(mPermisoCompuesto)
+                mPadre.Patentes.Add(mgrupopatente)
 
-                mPermisoCompuesto.Alta()
+                mgrupopatente.Alta()
                 treePatentes.Nodes.Clear()
 
                 Patentes_Load(Nothing, Nothing)

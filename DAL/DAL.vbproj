@@ -62,11 +62,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BD.vb" />
-    <Compile Include="ClienteDAL.vb" />
-    <Compile Include="EsteticistaDAL.vb" />
-    <Compile Include="FamiliaDAL.vb" />
-    <Compile Include="GrupoPatenteDAL.vb" />
+    <Compile Include="ConexionBD\BD.vb" />
+    <Compile Include="familiaGrupoPatente.vb" />
+    <Compile Include="Seguridad\FamiliapatenteDAL.vb" />
+    <Compile Include="Sistema\ClienteDAL.vb" />
+    <Compile Include="Sistema\EsteticistaDAL.vb" />
+    <Compile Include="Seguridad\FamiliaDAL.vb" />
+    <Compile Include="Seguridad\GrupoPatenteDAL.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -82,8 +84,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PatenteDAL.vb" />
-    <Compile Include="UsuarioDAL.vb" />
+    <Compile Include="Seguridad\PatenteDAL.vb" />
+    <Compile Include="Seguridad\UsuarioDAL.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
