@@ -31,4 +31,8 @@ Public Class usuariologin
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
         Me.Close()
     End Sub
+
+    Private Sub usuariologin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
