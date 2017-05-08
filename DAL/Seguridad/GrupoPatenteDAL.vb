@@ -19,7 +19,7 @@ Public Class GrupoPatenteDAL
         Else
             pgrupopatente.padre = pRow("padre")
         End If
-        Return pgrupopatente
+         Return pgrupopatente
     End Function
 
 

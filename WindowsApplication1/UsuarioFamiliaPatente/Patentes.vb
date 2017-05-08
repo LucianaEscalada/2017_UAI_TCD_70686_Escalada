@@ -19,7 +19,7 @@ Public Class Patentes
         mPermisoRaiz.MostrarEnTreeview(treePatentes)
     End Sub
 
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As EventArgs) Handles IngresarPatenteToolStripMenuItem.Click
 
         Dim mSelectedNode As TreeNode = Me.treePatentes.SelectedNode
 
@@ -41,8 +41,8 @@ Public Class Patentes
                 mNodoNuevo.Text = mNombrePermiso
 
                 mPermiso.nombrePatente = mNombrePermiso
-                mPermiso.Formulario = mNombreFormulario
-                mPermiso.Padre = mPadre.id
+                mPermiso.formulario = mNombreFormulario
+                mPermiso.padre = mPadre.id
 
                 mPermiso.Alta()
 
@@ -79,7 +79,7 @@ Public Class Patentes
                 mgrupopatente.padre = mPadre.id
 
                 Dim mNodoNuevo As New TreeNode
-                mNodoNuevo.Text = mNombrePermiso
+                mNodoNuevo.Text = mgrupopatente.nombrePatente
                 mNodoNuevo.Tag = mgrupopatente
 
                 mSelectedNode.Nodes.Add(mNodoNuevo)

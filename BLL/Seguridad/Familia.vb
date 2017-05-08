@@ -11,36 +11,29 @@ Public Class Familia
     Private Sub cargarBE(pfamilia As BE.Familia)
 
         If Not IsNothing(pfamilia) Then
-            Me.id_familia = pfamilia.familia_id
-            Me.nombreFamilia = pfamilia.nombre
+            pfamilia.familia_id = Me.id_familia
+            pfamilia.nombre = Me.nombreFamilia
 
-            If pfamilia.listapatentes.Count > 0 Then
-                For Each mPatenteBE As BE.PatenteAbstracta In pfamilia.listapatentes
-                    Dim mPatente As BLL.PatenteAbstracta
+            If Me.mlistaPatentes.Count > 0 Then
+                For Each mPatenteBll As BLL.PatenteAbstracta In Me.mlistaPatentes
+                    Dim mPatente As BE.PatenteAbstracta
 
-                    If TypeOf (mPatenteBE) Is BE.GrupoPatente Then
-                        mPatente = New BLL.GrupoPatente(mPatenteBE)
+                    If TypeOf (mPatenteBll) Is BLL.GrupoPatente Then
+                        mPatente = New BE.GrupoPatente
+                        CType(mPatenteBll, BLL.GrupoPatente).cargarBE(mPatente)
                     Else
-                        mPatente = New BLL.Patente(mPatenteBE)
+                        mPatente = New BE.patente
+                        CType(mPatenteBll, BLL.Patente).cargarBE(mPatente)
                     End If
 
-                    Me.mlistaPatentes.Add(mPatente)
+                    pfamilia.listapatentes.Add(mPatente)
                 Next
             End If
         End If
-  
+
 
     End Sub
 
-    Private _familia As New List(Of BLL.PatenteAbstracta)
-    Public Property familias() As List(Of BLL.PatenteAbstracta)
-        Get
-            Return _familia
-        End Get
-        Set(ByVal value As List(Of BLL.PatenteAbstracta))
-            _familia = value
-        End Set
-    End Property
     Public mlistaPatentes As New List(Of BLL.PatenteAbstracta)
 
     Private _patenteRaiz As PatenteAbstracta
@@ -71,6 +64,16 @@ Public Class Familia
         Else
             cargarBE(mBE)
             FamiliaDAL.GuardarModificacion(mBE)
+        End If
+
+        If mBE.listapatentes.Count > 0 Then
+            For Each mPermiso As BE.PatenteAbstracta In mBE.listapatentes
+                If TypeOf (mPermiso) Is BE.patente Then
+                    familiaPatente.GuardarNuevo(mBE.familia_id, mPermiso.id)
+                Else
+                    familiaGrupoPatente.GuardarNuevo(mBE.familia_id, mPermiso.id)
+                End If
+            Next
         End If
     End Sub
 

@@ -3,7 +3,7 @@ Imports System.Windows.Forms
 Public Class GrupoPatente
     Inherits BLL.PatenteAbstracta
 
-    Private _mPatenteBE As BE.PatenteAbstracta
+    'Private _mPatenteBE As BE.PatenteAbstracta
 
     Sub New(PBE As BE.GrupoPatente)
         CargarPropiedades(PBE)
@@ -16,8 +16,7 @@ Public Class GrupoPatente
     End Sub
 
     Sub New(mPatenteBE As BE.PatenteAbstracta)
-        ' TODO: Complete member initialization 
-        _mPatenteBE = mPatenteBE
+        CargarPropiedades(mPatenteBE.id)
     End Sub
 
     Sub New()
@@ -25,7 +24,7 @@ Public Class GrupoPatente
     End Sub
 
 
-    Private Sub cargarBE(ppatente As BE.PatenteAbstracta)
+    Public Sub cargarBE(ppatente As BE.PatenteAbstracta)
         ppatente.id = Me.id
         ppatente.nombre = Me.nombrePatente
         ppatente.formulario = Me.formulario
@@ -102,19 +101,19 @@ Public Class GrupoPatente
     End Function
 
     Private Sub AgregarHijos(pPadre As BLL.GrupoPatente, pTreeNode As TreeNode)
-        For Each mPatenteabstracta As BLL.GrupoPatente In pPadre.listar
+        For Each mPatenteabstracta As BLL.PatenteAbstracta In pPadre.Patentes
             Dim mNode As New TreeNode
             mNode.Text = mPatenteabstracta.nombrePatente
             mNode.Tag = mPatenteabstracta
             pTreeNode.Nodes.Add(mNode)
 
             If TypeOf (mPatenteabstracta) Is BLL.GrupoPatente Then
-                'mNode.Text = mPermisoAbstracto.Nombre
+                mNode.Text = mPatenteabstracta.nombrePatente
 
                 Dim mgrupopatente As BLL.GrupoPatente
                 mgrupopatente = DirectCast(mPatenteabstracta, BLL.GrupoPatente)
 
-                If mgrupopatente.listar.Count > 0 Then
+                If mgrupopatente.Patentes.Count > 0 Then
                     AgregarHijos(mgrupopatente, pTreeNode.LastNode)
                 End If
             End If
@@ -161,14 +160,14 @@ Public Class GrupoPatente
         If Not IsNothing(mListaCompuestos) Then
             For Each mPermisoAbs As BE.PatenteAbstracta In mListaCompuestos
                 Dim mPermisoBLL As New BLL.GrupoPatente(mPermisoAbs)
-                Me.listar.Add(mPermisoBLL)
+                Me.Patentes.Add(mPermisoBLL)
             Next
         End If
 
         If Not IsNothing(mListaSimples) Then
             For Each mPermisoAbs As BE.PatenteAbstracta In mListaSimples
                 Dim mPatentebll As New BLL.Patente(mPermisoAbs)
-                Me.listar.Add(mPatentebll)
+                Me.Patentes.Add(mPatentebll)
             Next
         End If
     End Sub

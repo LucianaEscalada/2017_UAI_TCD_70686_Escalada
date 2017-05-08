@@ -5,11 +5,10 @@ Public Class Patente
 
 
     Private _patentes As New List(Of BLL.PatenteAbstracta)
-    Private _mPatenteBE As BE.PatenteAbstracta
+    'Private _mPatenteBE As BE.PatenteAbstracta
 
     Sub New(mPatenteBE As BE.PatenteAbstracta)
-        ' TODO: Complete member initialization 
-        _mPatenteBE = mPatenteBE
+        CargarPropiedades(mPatenteBE.id)
     End Sub
 
     Public Property Patentes() As List(Of BLL.PatenteAbstracta)
@@ -23,8 +22,8 @@ Public Class Patente
 
 
 
-    Private Sub cargarBE(ppatente As BE.PatenteAbstracta)
-        ' ppatente.id = Me.id
+    Public Sub cargarBE(ppatente As BE.PatenteAbstracta)
+        'ppatente.id = Me.id
         ppatente.nombre = Me.nombrePatente
         ppatente.formulario = Me.formulario
         ppatente.padre = Me.padre

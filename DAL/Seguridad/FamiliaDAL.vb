@@ -4,7 +4,7 @@ Public Class FamiliaDAL
 
 
     Public Shared Function proximoID() As Integer
-        Return BD.ExecuteScalar("Select isnull (max(familia_id), 0) from familia")
+        Return BD.ExecuteScalar("Select isnull (max(familia_id), 0) from familia") + 1
     End Function
 
     Private Shared Function CargarDTO(pfamilia As Familia, pRow As DataRow) As Familia
@@ -37,7 +37,7 @@ Public Class FamiliaDAL
 
 
     Public Shared Sub GuardarNuevo(pfamilia As Familia)
-        Dim mCommand As String = "INSERT INTO Familia(Familia_id, nombre) VALUES (" & pfamilia.familia_id & ", '" & pfamilia.nombre & "');"
+        Dim mCommand As String = "INSERT INTO Familia(Familia_id, nombrefamilia) VALUES (" & pfamilia.familia_id & ", '" & pfamilia.nombre & "');"
 
         Try
             BD.ExecuteNonQuery(mCommand)

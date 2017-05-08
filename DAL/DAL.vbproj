@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="ConexionBD\BD.vb" />
     <Compile Include="familiaGrupoPatente.vb" />
+    <Compile Include="familiaPatente.vb" />
     <Compile Include="Seguridad\FamiliapatenteDAL.vb" />
     <Compile Include="Sistema\ClienteDAL.vb" />
     <Compile Include="Sistema\EsteticistaDAL.vb" />
