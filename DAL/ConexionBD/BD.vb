@@ -3,6 +3,7 @@ Public Class BD
 
     Private Shared mConnectionStr As String = "Data Source=LUCHI-PC\sqlexpress;Initial Catalog= sosbelleza;Integrated Security=True"
     'Private Shared mConnectionStr As String = "Data Source=PABLO-PC\SQLEXPRESS;Initial Catalog=sosbelleza;Integrated Security=True"
+    ' Private Shared mConnectionStr As String = "Data Source=.\SQL14_UAI;Initial Catalog= sosbelleza;Integrated Security=True"
 
     Private Shared mConnection As SqlConnection
 
