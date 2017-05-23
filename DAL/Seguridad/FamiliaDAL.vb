@@ -75,8 +75,8 @@ Public Class FamiliaDAL
     End Sub
 
 
-    Public Shared Function ListarCliente() As List(Of Familia)
-        Dim mLista As New List(Of familia)
+    Public Shared Function listarfamilia() As List(Of Familia)
+        Dim mLista As New List(Of Familia)
         Dim mCommand As String = "SELECT Familia_id, NombreFamilia FROM Familia"
         Dim mDataSet As DataSet
 
@@ -85,7 +85,7 @@ Public Class FamiliaDAL
 
             If Not IsNothing(mDataSet) And mDataSet.Tables.Count > 0 And mDataSet.Tables(0).Rows.Count > 0 Then
                 For Each mRow As DataRow In mDataSet.Tables(0).Rows
-                    Dim mfamilia As New familia
+                    Dim mfamilia As New Familia
 
                     mfamilia = CargarDTO(mfamilia, mRow)
 

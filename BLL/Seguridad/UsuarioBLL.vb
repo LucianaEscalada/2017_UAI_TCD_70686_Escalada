@@ -49,7 +49,7 @@ Public Class UsuarioBLL
         Dim mBE As New be.usuario
 
         If Me.ID = 0 Then
-            Me.ID = UsuarioDAL.GetProximoID
+
             CargarBE(mBE)
             UsuarioDAL.GuardarNuevo(mBE)
         Else
@@ -73,12 +73,17 @@ Public Class UsuarioBLL
         Dim mListaBE As List(Of be.usuario) = UsuarioDAL.ListarUsuarios
 
         For Each mBE As be.usuario In mListaBE
-            Dim mUsuario As New UsuarioBLL(mBE.idusuario)
+            Dim mUsuario As New UsuarioBLL(mBE.email)
 
             mLista.Add(mUsuario)
         Next
 
         Return mLista
+    End Function
+
+
+    Public Overrides Function ToString() As String
+        Return Me.Nombre & " " & Me.Apellido
     End Function
 
 

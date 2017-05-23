@@ -2,10 +2,27 @@
 Imports DAL
 Public Class Familia
 
+    Private _p1 As Integer
+
+    Sub New(pid As Integer)
+        CargarPropiedades(pid)
+    End Sub
+
+    Sub New()
+
+    End Sub
     Public Property id_familia As Integer
     Public Property nombreFamilia As String
 
+    Private Sub CargarPropiedades(pid As Integer)
+        Dim pBE As BE.Familia = FamiliaDAL.Obtenerfamilia(pid)
 
+        If Not IsNothing(pBE) Then
+            Me.id_familia = pBE.familia_id
+            Me.nombreFamilia = pBE.nombre
+
+        End If
+    End Sub
 
 
     Private Sub cargarBE(pfamilia As BE.Familia)
@@ -86,5 +103,28 @@ Public Class Familia
     Public Overrides Function ToString() As String
         Return Me.nombreFamilia()
     End Function
+
+
+
+
+    Public Shared Function listar() As List(Of BLL.Familia)
+
+
+        Dim mlista As New List(Of BLL.Familia)
+        Dim mlistabe As List(Of BE.Familia) = FamiliaDAL.listarfamilia
+
+        If Not IsNothing(mlistabe) Then
+            For Each mfamilia As BE.Familia In mlistabe
+                If TypeOf (mfamilia) Is BE.Familia Then
+                    Dim pfamilia As New BLL.Familia(mfamilia.familia_id)
+                    mlista.Add(pfamilia)
+                End If
+
+            Next
+        End If
+        Return mlista
+    End Function
+
+
 
 End Class

@@ -23,7 +23,7 @@ Public Class Patente
 
 
     Public Sub cargarBE(ppatente As BE.PatenteAbstracta)
-        'ppatente.id = Me.id
+        ppatente.id = Me.id
         ppatente.nombre = Me.nombrePatente
         ppatente.formulario = Me.formulario
         ppatente.padre = Me.padre

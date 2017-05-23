@@ -46,8 +46,8 @@ Public Class UsuarioDAL
 
 
     Public Shared Sub GuardarNuevo(pUsuario As BE.Usuario)
-        Dim mCommand As String = "INSERT INTO Usuario(Usuario_id, nombre, apellido,email, contraseña)" &
-                                 "VALUES (" & pUsuario.idusuario & ", '" & pUsuario.nombre & "', '" & pUsuario.Apellido & "','" & pUsuario.email & "', '" & pUsuario.contraseña & "');"
+        Dim mCommand As String = "INSERT INTO Usuario( nombre, apellido,email, contraseña)" &
+                                 "VALUES ('" & pUsuario.nombre & "', '" & pUsuario.Apellido & "','" & pUsuario.email & "', '" & pUsuario.contraseña & "');"
 
         Try
             BD.ExecuteNonQuery(mCommand)
@@ -61,7 +61,7 @@ Public Class UsuarioDAL
     'Modifica un registro de la tabla Usuario
     Public Shared Sub GuardarModificacion(pUsuario As BE.Usuario)
         Dim mCommand As String = "UPDATE Usuario SET " &
-                                 "', Nombre = '" & pUsuario.nombre &
+                                 "Nombre = '" & pUsuario.nombre &
                                  "', Apellido = '" & pUsuario.Apellido &
                                    "', email = '" & pUsuario.email &
                                  "', Contraseña = '" & pUsuario.contraseña &
@@ -93,7 +93,7 @@ Public Class UsuarioDAL
     'Devuelve una lista de objetos be.usuario con los datos de cada registro de la tabla Usuario
     Public Shared Function ListarUsuarios() As List(Of BE.Usuario)
         Dim mLista As New List(Of be.usuario)
-        Dim mCommand As String = "SELECT SELECT Usuario_id, Nombre, Apellido,email, contraseña, familia FROM Usuario"
+        Dim mCommand As String = "SELECT Usuario_id, Nombre, Apellido,email, contraseña, familia FROM Usuario"
         Dim mDataSet As DataSet
 
         Try
