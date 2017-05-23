@@ -5,7 +5,7 @@ Public Class GrupoPatenteDAL
         Return BD.ExecuteScalar("Select isnull (max(grupopatente_id), 0) from grupopatente")
     End Function
 
-    Private Shared Function CargarDTO(pgrupopatente As GrupoPatente, pRow As DataRow) As GrupoPatente
+    Public Shared Function CargarDTO(pgrupopatente As GrupoPatente, pRow As DataRow) As GrupoPatente
         pgrupopatente.id = pRow("grupopatente_id")
         pgrupopatente.nombre = pRow("Nombre")
         If TypeOf (pRow("formulario")) Is DBNull Then
@@ -19,7 +19,7 @@ Public Class GrupoPatenteDAL
         Else
             pgrupopatente.padre = pRow("padre")
         End If
-         Return pgrupopatente
+        Return pgrupopatente
     End Function
 
 

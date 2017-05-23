@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form2
+Partial Class Esteticista
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -31,9 +31,6 @@ Partial Class Form2
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,7 +86,7 @@ Partial Class Form2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(57, 196)
+        Me.Button1.Location = New System.Drawing.Point(399, 269)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(104, 47)
         Me.Button1.TabIndex = 30
@@ -98,7 +95,7 @@ Partial Class Form2
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(437, 274)
+        Me.Button2.Location = New System.Drawing.Point(509, 269)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(104, 47)
         Me.Button2.TabIndex = 31
@@ -108,30 +105,14 @@ Partial Class Form2
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
         Me.DataGridView1.Location = New System.Drawing.Point(399, 44)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(347, 199)
         Me.DataGridView1.TabIndex = 32
         '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Nombre"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Apellido"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Celular"
-        Me.Column3.Name = "Column3"
-        '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(602, 274)
+        Me.Button3.Location = New System.Drawing.Point(628, 269)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(104, 47)
         Me.Button3.TabIndex = 33
@@ -148,7 +129,7 @@ Partial Class Form2
         Me.Label4.TabIndex = 34
         Me.Label4.Text = "Esteticistas registrados"
         '
-        'Form2
+        'Esteticista
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -165,7 +146,7 @@ Partial Class Form2
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
-        Me.Name = "Form2"
+        Me.Name = "Esteticista"
         Me.Text = "Esteticista"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -181,9 +162,6 @@ Partial Class Form2
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

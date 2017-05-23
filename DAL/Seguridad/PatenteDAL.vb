@@ -2,7 +2,7 @@
 Public Class PatenteDAL
 
 
-    Private Shared Function Cargarbe(Ppatente As patente, pRow As DataRow) As patente
+    Public Shared Function Cargarbe(Ppatente As patente, pRow As DataRow) As patente
         Ppatente.id = pRow("patente_id")
         Ppatente.nombre = pRow("Nombre")
         If TypeOf (pRow("formulario")) Is DBNull Then

@@ -11,8 +11,8 @@ Public Class usuariologin
         'me fijo que el mail que me trajo sea igual al mail que ingrese
         If musuario2.email = musuario.email Then
             If musuario.Password = musuario2.Password Then
-                Dim mpantallaprincipal As New Principal
-                Principal.ShowDialog()
+                Dim mpantallaprincipal As New Principal(musuario2)
+                mpantallaprincipal.ShowDialog()
             Else
                 MsgBox("Datos incorrectos")
             End If

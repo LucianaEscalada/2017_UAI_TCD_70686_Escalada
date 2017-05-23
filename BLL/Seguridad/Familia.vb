@@ -21,6 +21,19 @@ Public Class Familia
             Me.id_familia = pBE.familia_id
             Me.nombreFamilia = pBE.nombre
 
+            If pBE.listapatentes.Count > 0 Then
+                For Each mPermisoBE As BE.PatenteAbstracta In pBE.listapatentes
+                    Dim mPermiso As BLL.PatenteAbstracta
+
+                    If TypeOf (mPermisoBE) Is BE.GrupoPatente Then
+                        mPermiso = New BLL.GrupoPatente(mPermisoBE)
+                    Else
+                        mPermiso = New BLL.Patente(mPermisoBE)
+                    End If
+
+                    Me.mlistaPatentes.Add(mPermiso)
+                Next
+            End If
         End If
     End Sub
 

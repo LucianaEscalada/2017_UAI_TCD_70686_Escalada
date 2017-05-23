@@ -9,6 +9,7 @@ Public Class EsteticistaDAL
     End Function
 
     Private Shared Function CargarDTO(pesteticista As Esteticista, pRow As DataRow) As Esteticista
+        pesteticista.id_esteticista = pRow("id_esteticista")
         pesteticista.nombre = pRow("Nombre")
         pesteticista.apellido = pRow("apellido")
         pesteticista.telefono = pRow("celular")
@@ -39,7 +40,7 @@ Public Class EsteticistaDAL
 
 
     Public Shared Sub GuardarNuevo(pesteticista As Esteticista)
-        Dim mCommand As String = "INSERT INTO Esteticista(id_esteticista, nombre, apellido, celular ) VALUES (" & pesteticista.id_esteticista & ",'" & pesteticista.nombre & "','" & pesteticista.apellido & "', " & pesteticista.telefono & "); "
+        Dim mCommand As String = "INSERT INTO Esteticista( nombre, apellido, celular ) VALUES ('" & pesteticista.nombre & "','" & pesteticista.apellido & "', " & pesteticista.telefono & "); "
 
         Try
             BD.ExecuteNonQuery(mCommand)
@@ -51,11 +52,11 @@ Public Class EsteticistaDAL
 
 
     Public Shared Sub GuardarModificacion(pesteticista As Esteticista)
-        Dim mCommand As String = "UPDATE datoscliente SET " & _
+        Dim mCommand As String = "UPDATE esteticista SET " & _
                                  "Nombre = '" & pesteticista.nombre & _
-                                 "', edad = '" & pesteticista.apellido & _
+                                 "', Apellido = '" & pesteticista.apellido & _
                                   "', celular = " & pesteticista.telefono & _
-                                 " , WHERE id_esteticista = " & pesteticista.id_esteticista
+                                 "  WHERE id_esteticista = " & pesteticista.id_esteticista
 
         Try
             BD.ExecuteNonQuery(mCommand)
@@ -80,7 +81,7 @@ Public Class EsteticistaDAL
 
     Public Shared Function ListarCliente() As List(Of Esteticista)
         Dim mLista As New List(Of Esteticista)
-        Dim mCommand As String = "SELECT nombre, apellido, celular  FROM esteticista"
+        Dim mCommand As String = "SELECT nombre, apellido, celular, id_esteticista  FROM esteticista"
         Dim mDataSet As DataSet
 
         Try

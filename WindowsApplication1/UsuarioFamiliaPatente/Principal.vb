@@ -1,29 +1,24 @@
 ﻿Imports BLL
 Public Class Principal
 
+
+
+    Dim usuario As UsuarioBLL
     Private Sub btnDefinirPatentes_Click(sender As Object, e As EventArgs) Handles btnDefinirPatentes.Click
         Dim form As New WindowsApplication1.Patentes
         form.ShowDialog()
     End Sub
 
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
+
+    Public Sub New(Optional pUsuario As UsuarioBLL = Nothing)
+        InitializeComponent()
+        Me.usuario = pUsuario
     End Sub
-
+   
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim p1 As New Patente
-        Dim p2 As New Patente
-        Dim p3 As New Patente
-        Dim p4 As New BLL.Familia
-
-
-        p1.nombrePatente = "p1"
-        p2.nombrePatente = "p1"
-        p3.nombrePatente = "p3"
-        p4.nombreFamilia = "p1p2"
-
-        Modelo.GetInstance.Familias.Add(p4)
-
+        Dim mPermisoComp As New BLL.GrupoPatente
+        mPermisoComp.MostrarEnMenuStrip(MenuStrip1, Me.usuario, Me)
     End Sub
 
     Private Sub btnDefinirFamilias_Click(sender As Object, e As EventArgs) Handles btnDefinirFamilias.Click

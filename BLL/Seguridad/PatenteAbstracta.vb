@@ -21,6 +21,7 @@ Public MustInherit Class PatenteAbstracta
     Public MustOverride Function MostrarEnTreeView(pTreeView As Windows.Forms.TreeView) As Windows.Forms.TreeView
     Public MustOverride Sub Alta()
     Public MustOverride Sub baja()
+    Public MustOverride Sub MostrarEnMenuStrip(pMenu As MenuStrip, pUsuario As UsuarioBLL, pForm As Form)
     'Public MustOverride Function Clone() As PatenteAbstracta
 
 

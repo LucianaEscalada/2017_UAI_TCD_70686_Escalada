@@ -4,6 +4,7 @@ Public Class Patente
     Inherits PatenteAbstracta
 
 
+
     Private _patentes As New List(Of BLL.PatenteAbstracta)
     'Private _mPatenteBE As BE.PatenteAbstracta
 
@@ -37,6 +38,7 @@ Public Class Patente
         If Not IsNothing(mBE) Then
             Me.id = mBE.id
             Me.nombrePatente = mBE.nombre
+            Me.formulario = mBE.formulario
             Me.padre = mBE.padre
 
         End If
@@ -98,4 +100,8 @@ Public Class Patente
     '    pat.nombrePatente = Me.nombrePatente
     '    Return pat
     'End Function
+
+    Public Overrides Sub MostrarEnMenuStrip(pMenu As MenuStrip, pUsuario As UsuarioBLL, pForm As Form)
+
+    End Sub
 End Class

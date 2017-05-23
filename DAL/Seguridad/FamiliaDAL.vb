@@ -10,6 +10,7 @@ Public Class FamiliaDAL
     Private Shared Function CargarDTO(pfamilia As Familia, pRow As DataRow) As Familia
         pfamilia.familia_id = pRow("Familia_id")
         pfamilia.nombre = pRow("NombreFamilia")
+        pfamilia.listapatentes = ObtenerPermisos(pfamilia.familia_id)
       
         Return pfamilia
     End Function
@@ -103,4 +104,48 @@ Public Class FamiliaDAL
         End Try
     End Function
 
+    Public Shared Function ObtenerPermisos(pID As Integer) As List(Of BE.PatenteAbstracta)
+        Dim mLista As New List(Of BE.PatenteAbstracta)
+        Dim mCommand As String = "select Patente.patente_id, nombre, formulario, padre " &
+                                  "from Patente " &
+                                  "inner join FamiliaPatente on FamiliaPatente.patente_id = Patente.patente_id " &
+                                  "where FamiliaPatente.familia_id = " & pID
+
+        Dim mCommandComp As String = "select GrupoPatente.grupopatente_id, nombre, formulario, padre from GrupoPatente inner join FamiliaGrupoPatente on FamiliaGrupoPatente.grupoPatente_id = GrupoPatente.grupoPatente_id where FamiliaGrupoPatente.familia_id = " & pID
+
+
+
+
+        Dim mDataSet As DataSet
+
+        Try
+            mDataSet = BD.ExecuteDataSet(mCommand)
+
+            If Not IsNothing(mDataSet) And mDataSet.Tables.Count > 0 And mDataSet.Tables(0).Rows.Count > 0 Then
+                For Each mRow As DataRow In mDataSet.Tables(0).Rows
+                    Dim mBE As New BE.patente
+
+                    mLista.Add(PatenteDAL.CargarBE(mBE, mRow))
+                Next
+            End If
+
+
+            mDataSet = BD.ExecuteDataSet(mCommandComp)
+
+            If Not IsNothing(mDataSet) And mDataSet.Tables.Count > 0 And mDataSet.Tables(0).Rows.Count > 0 Then
+                For Each mRow As DataRow In mDataSet.Tables(0).Rows
+                    Dim mBE As New BE.GrupoPatente
+
+                    mLista.Add(GrupoPatenteDAL.CargarDTO(mBE, mRow))
+                Next
+            End If
+
+            Return mLista
+        Catch ex As Exception
+            MsgBox("Error - ObtenerPermisos - RolDAL")
+            MsgBox(ex.Message)
+            Return Nothing
+        End Try
+
+    End Function
 End Class

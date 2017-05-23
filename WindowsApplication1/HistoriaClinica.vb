@@ -1,5 +1,5 @@
 ﻿Imports BLL
-Public Class Form1
+Public Class HistoriaClinica
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
 
