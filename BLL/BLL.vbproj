@@ -86,6 +86,8 @@
     <Compile Include="Seguridad\Patente.vb" />
     <Compile Include="Seguridad\PatenteAbstracta.vb" />
     <Compile Include="Seguridad\UsuarioBLL.vb" />
+    <Compile Include="Sistema\productoBLL.vb" />
+    <Compile Include="Sistema\tratamientoBLL.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

@@ -87,6 +87,8 @@
     </Compile>
     <Compile Include="Seguridad\PatenteDAL.vb" />
     <Compile Include="Seguridad\UsuarioDAL.vb" />
+    <Compile Include="Sistema\productoDAL.vb" />
+    <Compile Include="Sistema\TratamientoDAL.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

@@ -2,9 +2,9 @@
 Imports BE
 Public Class Familia
 
-    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+    Private Sub btnAceptar_Click(sender As Object, e As EventArgs)
         Dim mfamilia As New BLL.Familia
-        Dim mListaPermisos As New List(Of bll.patenteabstracta)
+        Dim mListaPermisos As New List(Of BLL.PatenteAbstracta)
 
         mfamilia.nombreFamilia = txtNombre.Text
         GetPermisosSeleccionados(treePatentes.Nodes, mListaPermisos)
@@ -26,13 +26,13 @@ Public Class Familia
     End Sub
 
 
-    Private Sub treePatentes_AfterCheck(sender As Object, e As TreeViewEventArgs) Handles treePatentes.AfterCheck
+    Private Sub treePatentes_AfterCheck(sender As Object, e As TreeViewEventArgs)
         e.Node.Tag.Seleccionada = e.Node.Checked
     End Sub
 
 
 
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
@@ -42,4 +42,11 @@ Public Class Familia
         mPermisoRaiz.MostrarEnTreeview(Me.treePatentes)
     End Sub
     
+    Private Sub lblNombreFamilia_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+
+    End Sub
 End Class

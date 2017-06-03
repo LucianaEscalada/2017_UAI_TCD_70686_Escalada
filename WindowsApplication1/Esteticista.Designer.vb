@@ -49,6 +49,7 @@ Partial Class Esteticista
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label1.Location = New System.Drawing.Point(54, 70)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(66, 18)
@@ -60,6 +61,7 @@ Partial Class Esteticista
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label2.Location = New System.Drawing.Point(54, 98)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(59, 18)
@@ -71,6 +73,7 @@ Partial Class Esteticista
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label3.Location = New System.Drawing.Point(54, 126)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(54, 18)
@@ -95,7 +98,7 @@ Partial Class Esteticista
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(151, 172)
+        Me.Button1.Location = New System.Drawing.Point(98, 165)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(104, 47)
         Me.Button1.TabIndex = 30
@@ -106,7 +109,7 @@ Partial Class Esteticista
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(151, 225)
+        Me.Button2.Location = New System.Drawing.Point(98, 218)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(104, 47)
         Me.Button2.TabIndex = 31
@@ -125,7 +128,7 @@ Partial Class Esteticista
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(151, 278)
+        Me.Button3.Location = New System.Drawing.Point(98, 271)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(104, 47)
         Me.Button3.TabIndex = 33
@@ -137,6 +140,7 @@ Partial Class Esteticista
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label4.Location = New System.Drawing.Point(277, 9)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(222, 24)
@@ -149,7 +153,7 @@ Partial Class Esteticista
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(665, 337)
+        Me.ClientSize = New System.Drawing.Size(663, 327)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.DataGridView1)

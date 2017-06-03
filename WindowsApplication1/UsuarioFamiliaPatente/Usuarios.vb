@@ -18,7 +18,7 @@ Public Class Usuarios
         Me.Close()
     End Sub
 
-    Private Sub button1_Click(sender As Object, e As EventArgs) Handles button1.Click
+    Private Sub button1_Click(sender As Object, e As EventArgs)
         musuarioseleccionado = ComboBox2.SelectedItem
         mfamiliaseleccionada = ComboBox1.SelectedItem
 

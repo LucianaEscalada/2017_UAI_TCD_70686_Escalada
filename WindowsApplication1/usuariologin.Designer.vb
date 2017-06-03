@@ -29,19 +29,18 @@ Partial Class usuariologin
         Me.BtnAceptar = New System.Windows.Forms.Button()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.UsernameTextBox = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LinkLblRegistrarse
         '
         Me.LinkLblRegistrarse.AutoSize = True
+        Me.LinkLblRegistrarse.BackColor = System.Drawing.Color.Transparent
         Me.LinkLblRegistrarse.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.LinkLblRegistrarse.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LinkLblRegistrarse.LinkColor = System.Drawing.Color.LightCoral
-        Me.LinkLblRegistrarse.Location = New System.Drawing.Point(291, 268)
+        Me.LinkLblRegistrarse.Location = New System.Drawing.Point(82, 126)
         Me.LinkLblRegistrarse.Name = "LinkLblRegistrarse"
         Me.LinkLblRegistrarse.Size = New System.Drawing.Size(81, 17)
         Me.LinkLblRegistrarse.TabIndex = 24
@@ -52,11 +51,12 @@ Partial Class usuariologin
         'LinkLblPass
         '
         Me.LinkLblPass.AutoSize = True
+        Me.LinkLblPass.BackColor = System.Drawing.Color.Transparent
         Me.LinkLblPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.LinkLblPass.ForeColor = System.Drawing.SystemColors.ControlText
         Me.LinkLblPass.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.LinkLblPass.LinkColor = System.Drawing.Color.LightCoral
-        Me.LinkLblPass.Location = New System.Drawing.Point(387, 268)
+        Me.LinkLblPass.Location = New System.Drawing.Point(178, 126)
         Me.LinkLblPass.Name = "LinkLblPass"
         Me.LinkLblPass.Size = New System.Drawing.Size(143, 17)
         Me.LinkLblPass.TabIndex = 23
@@ -66,33 +66,37 @@ Partial Class usuariologin
         '
         'BtnCancelar
         '
+        Me.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BtnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.BtnCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.BtnCancelar.Location = New System.Drawing.Point(436, 303)
+        Me.BtnCancelar.Location = New System.Drawing.Point(227, 158)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(94, 35)
         Me.BtnCancelar.TabIndex = 22
         Me.BtnCancelar.Tag = "Cancelar"
         Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelar.UseVisualStyleBackColor = False
         '
         'BtnAceptar
         '
+        Me.BtnAceptar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BtnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.BtnAceptar.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.BtnAceptar.Location = New System.Drawing.Point(291, 303)
+        Me.BtnAceptar.Location = New System.Drawing.Point(82, 158)
         Me.BtnAceptar.Name = "BtnAceptar"
         Me.BtnAceptar.Size = New System.Drawing.Size(94, 35)
         Me.BtnAceptar.TabIndex = 21
         Me.BtnAceptar.Tag = "Aceptar"
         Me.BtnAceptar.Text = "Aceptar"
+        Me.BtnAceptar.UseVisualStyleBackColor = False
         '
         'PasswordTextBox
         '
         Me.PasswordTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.PasswordTextBox.Location = New System.Drawing.Point(291, 245)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(82, 100)
         Me.PasswordTextBox.MaxLength = 8
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -102,25 +106,18 @@ Partial Class usuariologin
         'UsernameTextBox
         '
         Me.UsernameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.UsernameTextBox.Location = New System.Drawing.Point(291, 188)
+        Me.UsernameTextBox.Location = New System.Drawing.Point(82, 43)
         Me.UsernameTextBox.Name = "UsernameTextBox"
         Me.UsernameTextBox.Size = New System.Drawing.Size(239, 23)
         Me.UsernameTextBox.TabIndex = 18
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(124, 152)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(143, 186)
-        Me.PictureBox1.TabIndex = 25
-        Me.PictureBox1.TabStop = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(291, 168)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(82, 23)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(42, 16)
         Me.Label1.TabIndex = 26
@@ -129,8 +126,10 @@ Partial Class usuariologin
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(291, 226)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label2.Location = New System.Drawing.Point(82, 81)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(77, 16)
         Me.Label2.TabIndex = 27
@@ -141,10 +140,9 @@ Partial Class usuariologin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(672, 464)
+        Me.ClientSize = New System.Drawing.Size(369, 235)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.LinkLblRegistrarse)
         Me.Controls.Add(Me.LinkLblPass)
         Me.Controls.Add(Me.BtnCancelar)
@@ -153,7 +151,6 @@ Partial Class usuariologin
         Me.Controls.Add(Me.UsernameTextBox)
         Me.Name = "usuariologin"
         Me.Text = "usuariologin"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -164,7 +161,6 @@ Partial Class usuariologin
     Friend WithEvents BtnAceptar As System.Windows.Forms.Button
     Friend WithEvents PasswordTextBox As System.Windows.Forms.TextBox
     Friend WithEvents UsernameTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

@@ -19,7 +19,7 @@ Public Class Patentes
         mPermisoRaiz.MostrarEnTreeview(treePatentes)
     End Sub
 
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As EventArgs) Handles IngresarPatenteToolStripMenuItem.Click
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As EventArgs)
 
         Dim mSelectedNode As TreeNode = Me.treePatentes.SelectedNode
 
@@ -56,17 +56,17 @@ Public Class Patentes
     End Sub
 
 
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+    Private Sub btnAceptar_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
 
 
-    Private Sub IngresarGrupoPatenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresarGrupoPatenteToolStripMenuItem.Click
+    Private Sub IngresarGrupoPatenteToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim mSelectedNode As TreeNode = treePatentes.SelectedNode
 
         If TypeOf mSelectedNode.Tag Is BLL.GrupoPatente Then
@@ -92,5 +92,9 @@ Public Class Patentes
                 treePatentes.ExpandAll()
             End If
         End If
+    End Sub
+
+    Private Sub treePatentes_AfterSelect(sender As Object, e As TreeViewEventArgs)
+
     End Sub
 End Class

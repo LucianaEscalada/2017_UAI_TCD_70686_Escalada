@@ -128,7 +128,6 @@ C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj
 C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj\Debug\WindowsApplication1.DialogoPatentes.resources
 C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj\Debug\WindowsApplication1.ElegirUsuario.resources
 C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj\Debug\WindowsApplication1.Familia.resources
-C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj\Debug\WindowsApplication1.FormularioABM.resources
 C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj\Debug\WindowsApplication1.Patentes.resources
 C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj\Debug\WindowsApplication1.Principal.resources
 C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj\Debug\WindowsApplication1.Usuarios.resources
@@ -167,3 +166,7 @@ C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\WindowsApplication1\
 C:\Users\P4BL0\Downloads\2017_UAI_TCD_70686_Escalada-master\WindowsApplication1\obj\Debug\WindowsApplication1.exe
 C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj\Debug\WindowsApplication1.HistoriaClinica.resources
 C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj\Debug\WindowsApplication1.Esteticista.resources
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj\Debug\WindowsApplication1.producto.resources
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj\Debug\WindowsApplication1.Formproveedor.resources
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj\Debug\WindowsApplication1.VenderProducto.resources
+C:\Users\Luchi\Desktop\CAMPO\2017_UAI_TCD_70686_Escalada\WindowsApplication1\obj\Debug\WindowsApplication1.Tratamientos.resources
