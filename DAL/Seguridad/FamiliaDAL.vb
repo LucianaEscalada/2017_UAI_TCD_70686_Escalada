@@ -42,11 +42,33 @@ Public Class FamiliaDAL
 
         Try
             BD.ExecuteNonQuery(mCommand)
+
+            CrearRelaciones(pfamilia)
         Catch ex As Exception
             MsgBox("Error - Nuevo - familia")
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Shared Sub CrearRelaciones(pRol As BE.Familia)
+        Dim mID As Integer = ObtenerID(pRol)
+
+        If pRol.listapatentes.Count > 0 Then
+            For Each mPermiso As BE.PatenteAbstracta In pRol.listapatentes
+                If TypeOf (mPermiso) Is BE.patente Then
+                    FamiliapatenteDAL.GuardarNuevo(mID, mPermiso.id)
+                Else
+                    familiaGrupoPatente.GuardarNuevo(mID, mPermiso.id)
+                End If
+            Next
+        End If
+    End Sub
+
+
+    Private Shared Function ObtenerID(pRol As BE.Familia) As Integer
+        Dim mCommand As String = "select familia_id from familia where nombrefamilia like '" & pRol.nombre & "'"
+        Return (BD.ExecuteScalar(mCommand))
+    End Function
 
 
     Public Shared Sub GuardarModificacion(pfamilia As Familia)
@@ -61,6 +83,8 @@ Public Class FamiliaDAL
             MsgBox("Error - Modificacion - FamiliaDAL")
             MsgBox(ex.Message)
         End Try
+
+
     End Sub
 
 
@@ -105,16 +129,58 @@ Public Class FamiliaDAL
     End Function
 
     Public Shared Function ObtenerPermisos(pID As Integer) As List(Of BE.PatenteAbstracta)
+        'Dim mLista As New List(Of BE.PatenteAbstracta)
+        'Dim mCommand As String = "select Patente.patente_id, nombre, formulario, padre " &
+        '                          "from Patente " &
+        '                          "inner join FamiliaPatente on FamiliaPatente.patente_id = Patente.patente_id " &
+        '                          "where FamiliaPatente.familia_id = " & pID
+
+        'Dim mCommandComp As String = "select GrupoPatente.grupopatente_id, nombre, formulario, padre from GrupoPatente inner join FamiliaGrupoPatente on FamiliaGrupoPatente.grupoPatente_id = GrupoPatente.grupoPatente_id where FamiliaGrupoPatente.familia_id = " & pID
+
+
+
+
+        'Dim mDataSet As DataSet
+
+        'Try
+        '    mDataSet = BD.ExecuteDataSet(mCommand)
+
+        '    If Not IsNothing(mDataSet) And mDataSet.Tables.Count > 0 And mDataSet.Tables(0).Rows.Count > 0 Then
+        '        For Each mRow As DataRow In mDataSet.Tables(0).Rows
+        '            Dim mBE As New BE.patente
+
+        '            mLista.Add(PatenteDAL.CargarBE(mBE, mRow))
+        '        Next
+        '    End If
+
+
+        '    mDataSet = BD.ExecuteDataSet(mCommandComp)
+
+        '    If Not IsNothing(mDataSet) And mDataSet.Tables.Count > 0 And mDataSet.Tables(0).Rows.Count > 0 Then
+        '        For Each mRow As DataRow In mDataSet.Tables(0).Rows
+        '            Dim mBE As New BE.GrupoPatente
+
+        '            mLista.Add(GrupoPatenteDAL.CargarDTO(mBE, mRow))
+        '        Next
+        '    End If
+
+        '    Return mLista
+        'Catch ex As Exception
+        '    MsgBox("Error - ObtenerPermisos - RolDAL")
+        '    MsgBox(ex.Message)
+        '    Return Nothing
+        'End Try
+
         Dim mLista As New List(Of BE.PatenteAbstracta)
-        Dim mCommand As String = "select Patente.patente_id, nombre, formulario, padre " &
-                                  "from Patente " &
-                                  "inner join FamiliaPatente on FamiliaPatente.patente_id = Patente.patente_id " &
-                                  "where FamiliaPatente.familia_id = " & pID
+        Dim mCommand As String = "select Patente.patente_id, nombre, formulario, padre " & _
+                                 "from patente " & _
+                                 "inner join familiaPatente on familiaPatente.Patente_id = patente.patente_id " & _
+                                 "where familiaPatente.familia_id = " & pID
 
-        Dim mCommandComp As String = "select GrupoPatente.grupopatente_id, nombre, formulario, padre from GrupoPatente inner join FamiliaGrupoPatente on FamiliaGrupoPatente.grupoPatente_id = GrupoPatente.grupoPatente_id where FamiliaGrupoPatente.familia_id = " & pID
-
-
-
+        Dim mCommandComp As String = "select grupoPatente.grupoPatente_id, nombre, formulario, padre " & _
+                                     "from grupoPatente " & _
+                                     "inner join familiaGrupoPatente on familiaGrupoPatente.grupoPatente_id = grupoPatente.grupoPatente_id " & _
+                                     "where familiaGrupoPatente.familia_id = " & pID
 
         Dim mDataSet As DataSet
 
@@ -125,7 +191,7 @@ Public Class FamiliaDAL
                 For Each mRow As DataRow In mDataSet.Tables(0).Rows
                     Dim mBE As New BE.patente
 
-                    mLista.Add(PatenteDAL.CargarBE(mBE, mRow))
+                    mLista.Add(PatenteDAL.Cargarbe(mBE, mRow))
                 Next
             End If
 
@@ -146,6 +212,5 @@ Public Class FamiliaDAL
             MsgBox(ex.Message)
             Return Nothing
         End Try
-
     End Function
 End Class

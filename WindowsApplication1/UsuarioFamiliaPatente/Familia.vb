@@ -3,15 +3,7 @@ Imports BE
 Public Class Familia
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs)
-        Dim mfamilia As New BLL.Familia
-        Dim mListaPermisos As New List(Of BLL.PatenteAbstracta)
-
-        mfamilia.nombreFamilia = txtNombre.Text
-        GetPermisosSeleccionados(treePatentes.Nodes, mListaPermisos)
-        mfamilia.mlistaPatentes = mListaPermisos
-        mfamilia.Alta()
-
-        Me.Close()
+ 
     End Sub
 
 
@@ -32,7 +24,7 @@ Public Class Familia
 
 
 
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs)
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
     End Sub
 
@@ -47,6 +39,25 @@ Public Class Familia
     End Sub
 
     Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+
+    End Sub
+
+    Private Sub btnAceptar_Click_1(sender As Object, e As EventArgs) Handles btnAceptar.Click
+        Dim mfamilia As New BLL.Familia
+        Dim mListaPermisos As New List(Of BLL.PatenteAbstracta)
+
+        mfamilia.nombreFamilia = txtNombre.Text
+        'GetPermisosSeleccionados(treePatentes.Nodes, mListaPermisos)
+
+        mfamilia.mlistaPatentes.Add(treePatentes.SelectedNode.Tag)
+
+        'mfamilia.mlistaPatentes = mListaPermisos
+        mfamilia.Alta()
+
+        Me.Close()
+    End Sub
+
+    Private Sub btnCancelar_Click_1(sender As Object, e As EventArgs)
 
     End Sub
 End Class

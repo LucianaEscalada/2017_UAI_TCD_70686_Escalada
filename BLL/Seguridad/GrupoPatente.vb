@@ -199,8 +199,8 @@ Public Class GrupoPatente
         Try
             Dim mPadre As BLL.GrupoPatente = DirectCast(pPermiso, BLL.GrupoPatente)
 
-            If Not mPadre.listar Is Nothing Then
-                For Each mPermisoAbs As BLL.PatenteAbstracta In mPadre.listar
+            If Not mPadre.Patentes Is Nothing Then
+                For Each mPermisoAbs As BLL.PatenteAbstracta In mPadre.Patentes
                     Dim mMenuItem As New ToolStripMenuItem
 
                     mMenuItem.Name = mPermisoAbs.nombrePatente

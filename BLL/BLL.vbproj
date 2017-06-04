@@ -63,6 +63,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="encriptadorBLL.vb" />
     <Compile Include="Sistema\cliente.vb" />
     <Compile Include="Sistema\esteticistabll.vb" />
     <Compile Include="Seguridad\Familia.vb" />

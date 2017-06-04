@@ -23,39 +23,29 @@ Partial Class Patentes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Patentes))
-        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.treePatentes = New System.Windows.Forms.TreeView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.IngresarPatenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IngresarGrupoPatenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnCancelar.Location = New System.Drawing.Point(362, 305)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(103, 46)
-        Me.btnCancelar.TabIndex = 16
-        Me.btnCancelar.Text = "CANCELAR"
-        Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'btnAceptar
         '
         Me.btnAceptar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnAceptar.Location = New System.Drawing.Point(94, 302)
+        Me.btnAceptar.Location = New System.Drawing.Point(29, 122)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(103, 46)
         Me.btnAceptar.TabIndex = 15
-        Me.btnAceptar.Text = "ACEPTAR"
+        Me.btnAceptar.Text = "MODIFICAR PATENTE"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
         'treePatentes
         '
-        Me.treePatentes.Location = New System.Drawing.Point(94, 59)
+        Me.treePatentes.Location = New System.Drawing.Point(138, 59)
         Me.treePatentes.Name = "treePatentes"
         Me.treePatentes.Size = New System.Drawing.Size(382, 237)
         Me.treePatentes.TabIndex = 14
@@ -78,7 +68,7 @@ Partial Class Patentes
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IngresarPatenteToolStripMenuItem, Me.IngresarGrupoPatenteToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(484, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(537, 24)
         Me.MenuStrip1.TabIndex = 12
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -94,13 +84,23 @@ Partial Class Patentes
         Me.IngresarGrupoPatenteToolStripMenuItem.Size = New System.Drawing.Size(140, 20)
         Me.IngresarGrupoPatenteToolStripMenuItem.Text = "Ingresar Grupo patente"
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(29, 188)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(103, 46)
+        Me.Button1.TabIndex = 17
+        Me.Button1.Text = "ELIMINAR PATENTE"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Patentes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(484, 363)
-        Me.Controls.Add(Me.btnCancelar)
+        Me.ClientSize = New System.Drawing.Size(537, 312)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.treePatentes)
         Me.Controls.Add(Me.Label1)
@@ -113,11 +113,11 @@ Partial Class Patentes
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents treePatentes As System.Windows.Forms.TreeView
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents IngresarPatenteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents IngresarGrupoPatenteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

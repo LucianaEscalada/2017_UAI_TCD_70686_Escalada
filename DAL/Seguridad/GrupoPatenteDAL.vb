@@ -62,7 +62,6 @@ Public Class GrupoPatenteDAL
 
     Public Shared Sub GuardarModificacion(pgrupopatente As GrupoPatente)
         Dim mCommand As String = "UPDATE grupopatente SET " & _
-                                 "grupopatente_id = " & pgrupopatente.id & _
                                  ", Nombre = '" & pgrupopatente.nombre & _
                                   "', formulario = '" & pgrupopatente.formulario & _
                                    "', padre = " & pgrupopatente.padre & _

@@ -24,7 +24,6 @@ Partial Class Principal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Principal))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.btnIniciarSesionComoUsuario = New System.Windows.Forms.Button()
         Me.btnDefinirUsuarios = New System.Windows.Forms.Button()
         Me.btnDefinirFamilias = New System.Windows.Forms.Button()
         Me.btnDefinirPatentes = New System.Windows.Forms.Button()
@@ -41,16 +40,6 @@ Partial Class Principal
         Me.MenuStrip1.Size = New System.Drawing.Size(630, 24)
         Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'btnIniciarSesionComoUsuario
-        '
-        Me.btnIniciarSesionComoUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnIniciarSesionComoUsuario.Location = New System.Drawing.Point(12, 69)
-        Me.btnIniciarSesionComoUsuario.Name = "btnIniciarSesionComoUsuario"
-        Me.btnIniciarSesionComoUsuario.Size = New System.Drawing.Size(106, 59)
-        Me.btnIniciarSesionComoUsuario.TabIndex = 10
-        Me.btnIniciarSesionComoUsuario.Text = "Iniciar Sesión"
-        Me.btnIniciarSesionComoUsuario.UseVisualStyleBackColor = False
         '
         'btnDefinirUsuarios
         '
@@ -101,7 +90,6 @@ Partial Class Principal
         Me.Controls.Add(Me.btnDefinirPatentes)
         Me.Controls.Add(Me.btnDefinirFamilias)
         Me.Controls.Add(Me.btnDefinirUsuarios)
-        Me.Controls.Add(Me.btnIniciarSesionComoUsuario)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "Principal"
         Me.Text = "Principal"
@@ -111,7 +99,6 @@ Partial Class Principal
 
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents btnIniciarSesionComoUsuario As System.Windows.Forms.Button
     Friend WithEvents btnDefinirUsuarios As System.Windows.Forms.Button
     Friend WithEvents btnDefinirFamilias As System.Windows.Forms.Button
     Friend WithEvents btnDefinirPatentes As System.Windows.Forms.Button

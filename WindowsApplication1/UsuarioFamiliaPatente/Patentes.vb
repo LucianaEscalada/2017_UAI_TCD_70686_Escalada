@@ -19,7 +19,7 @@ Public Class Patentes
         mPermisoRaiz.MostrarEnTreeview(treePatentes)
     End Sub
 
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As EventArgs)
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As EventArgs) Handles IngresarPatenteToolStripMenuItem.Click
 
         Dim mSelectedNode As TreeNode = Me.treePatentes.SelectedNode
 
@@ -66,12 +66,12 @@ Public Class Patentes
 
 
 
-    Private Sub IngresarGrupoPatenteToolStripMenuItem_Click(sender As Object, e As EventArgs)
+    Private Sub IngresarGrupoPatenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresarGrupoPatenteToolStripMenuItem.Click
         Dim mSelectedNode As TreeNode = treePatentes.SelectedNode
 
         If TypeOf mSelectedNode.Tag Is BLL.GrupoPatente Then
             Dim mPadre As BLL.GrupoPatente = mSelectedNode.Tag
-            Dim mNombrePermiso As String = InputBox("Ingrese el nombre del Permiso: ")
+            Dim mNombrePermiso As String = InputBox("Ingrese el nombre de la patente: ")
 
             If mNombrePermiso.Length > 0 Then
                 Dim mgrupopatente As New BLL.GrupoPatente
@@ -95,6 +95,27 @@ Public Class Patentes
     End Sub
 
     Private Sub treePatentes_AfterSelect(sender As Object, e As TreeViewEventArgs)
+
+    End Sub
+
+    Private Sub btnAceptar_Click_1(sender As Object, e As EventArgs) Handles btnAceptar.Click
+        If TypeOf (treePatentes.SelectedNode.Tag) Is BLL.Patente Then
+            Dim mFormulario As New DialogoPatentes(treePatentes.SelectedNode.Tag)
+            mFormulario.ShowDialog()
+        ElseIf TypeOf (treePatentes.SelectedNode.Tag) Is BLL.GrupoPatente Then
+            Dim mPermiso As BLL.GrupoPatente = treePatentes.SelectedNode.Tag
+
+            mPermiso.nombrePatente = InputBox("Ingrese el nuevo nombre para el grupo patente:")
+
+            mPermiso.Alta()
+
+            treePatentes.SelectedNode.Tag = mPermiso
+            treePatentes.Nodes.Clear()
+            Patentes_Load(Nothing, Nothing)
+        End If
+    End Sub
+
+    Private Sub IngresarPatenteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngresarPatenteToolStripMenuItem.Click
 
     End Sub
 End Class

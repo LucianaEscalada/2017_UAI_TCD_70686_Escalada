@@ -2,7 +2,9 @@
 Imports BLL
 Public Class DialogoPatentes
 
-    Public Sub New()
+
+
+    Public Sub New(Optional ppatente As BLL.PatenteAbstracta = Nothing)
 
         ' Llamada necesaria para el diseñador.
         InitializeComponent()
@@ -13,9 +15,17 @@ Public Class DialogoPatentes
         For Each t As Type In Asm.GetTypes()
             If t.IsSubclassOf(GetType(Form)) Then
                 Me.cmbFormularios.Items.Add(t.FullName)
+                If Not IsNothing(ppatente) Then
+                    If t.FullName = ppatente.formulario Then
+                        cmbFormularios.SelectedItem = t.FullName
+                    End If
+                End If
             End If
 
         Next
+        If Not IsNothing(ppatente) Then
+            txtNombre.Text = ppatente.nombrePatente
+        End If
     End Sub
 
     Public Function Nombre() As String

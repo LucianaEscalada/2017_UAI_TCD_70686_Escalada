@@ -18,16 +18,6 @@ Public Class Usuarios
         Me.Close()
     End Sub
 
-    Private Sub button1_Click(sender As Object, e As EventArgs)
-        musuarioseleccionado = ComboBox2.SelectedItem
-        mfamiliaseleccionada = ComboBox1.SelectedItem
-
-        musuarioseleccionado.rol = mfamiliaseleccionada.id_familia
-
-        musuarioseleccionado.Guardar()
-        MsgBox("Familia Asignada correctamente")
-
-    End Sub
 
 
     'Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedValueChanged
@@ -46,4 +36,14 @@ Public Class Usuarios
     '        End If
     '    End If
     'End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        musuarioseleccionado = ComboBox2.SelectedItem
+        mfamiliaseleccionada = ComboBox1.SelectedItem
+
+        musuarioseleccionado.rol = mfamiliaseleccionada.id_familia
+
+        musuarioseleccionado.Guardar()
+        MsgBox("Familia Asignada correctamente")
+    End Sub
 End Class
