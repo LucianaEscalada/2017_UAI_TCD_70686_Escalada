@@ -66,6 +66,7 @@
     <Compile Include="familiaGrupoPatente.vb" />
     <Compile Include="familiaPatente.vb" />
     <Compile Include="Seguridad\FamiliapatenteDAL.vb" />
+    <Compile Include="Sistema\AntecedentesMedicosDAL.vb" />
     <Compile Include="Sistema\ClienteDAL.vb" />
     <Compile Include="Sistema\EsteticistaDAL.vb" />
     <Compile Include="Seguridad\FamiliaDAL.vb" />

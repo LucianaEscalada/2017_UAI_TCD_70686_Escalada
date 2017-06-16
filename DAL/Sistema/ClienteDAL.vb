@@ -19,7 +19,7 @@ Public Class ClienteDAL
 
     Public Shared Function ObtenerCliente(pID As Integer) As clientegral
         Dim mcliente As New clientegral
-        Dim mCommand As String = "SELECT categoria_id, categoria_nombre FROM Categoria WHERE categoria_id = " & pID
+        Dim mCommand As String = "SELECT * FROM datoscliente WHERE dni = " & pID
 
         Try
             Dim mDataSet As DataSet = BD.ExecuteDataSet(mCommand)

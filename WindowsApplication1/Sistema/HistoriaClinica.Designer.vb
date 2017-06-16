@@ -74,6 +74,11 @@ Partial Class HistoriaClinica
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
@@ -90,11 +95,6 @@ Partial Class HistoriaClinica
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         TabControl1 = New System.Windows.Forms.TabControl()
         TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -110,10 +110,11 @@ Partial Class HistoriaClinica
         TabControl1.Controls.Add(Me.TabPage1)
         TabControl1.Controls.Add(Me.TabPage2)
         TabControl1.Controls.Add(Me.TabPage3)
-        TabControl1.Location = New System.Drawing.Point(12, 12)
+        TabControl1.Location = New System.Drawing.Point(23, 14)
+        TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         TabControl1.Name = "TabControl1"
         TabControl1.SelectedIndex = 0
-        TabControl1.Size = New System.Drawing.Size(1235, 433)
+        TabControl1.Size = New System.Drawing.Size(1852, 666)
         TabControl1.TabIndex = 17
         '
         'TabPage1
@@ -139,62 +140,70 @@ Partial Class HistoriaClinica
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.Label7)
         Me.TabPage1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1227, 407)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabPage1.Size = New System.Drawing.Size(1844, 633)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Cliente"
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(179, 219)
+        Me.TextBox7.Location = New System.Drawing.Point(268, 337)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox7.Size = New System.Drawing.Size(148, 26)
         Me.TextBox7.TabIndex = 23
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(179, 169)
+        Me.TextBox5.Location = New System.Drawing.Point(268, 260)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.Size = New System.Drawing.Size(148, 26)
         Me.TextBox5.TabIndex = 21
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(179, 193)
+        Me.TextBox6.Location = New System.Drawing.Point(268, 297)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox6.Size = New System.Drawing.Size(148, 26)
         Me.TextBox6.TabIndex = 22
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(179, 119)
+        Me.TextBox3.Location = New System.Drawing.Point(268, 183)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(148, 26)
         Me.TextBox3.TabIndex = 19
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(179, 143)
+        Me.TextBox4.Location = New System.Drawing.Point(268, 220)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(148, 26)
         Me.TextBox4.TabIndex = 20
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(554, 22)
+        Me.DataGridView1.Location = New System.Drawing.Point(831, 34)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(636, 337)
+        Me.DataGridView1.Size = New System.Drawing.Size(954, 518)
         Me.DataGridView1.TabIndex = 18
         '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button3.Location = New System.Drawing.Point(357, 179)
+        Me.Button3.Location = New System.Drawing.Point(536, 275)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(104, 47)
+        Me.Button3.Size = New System.Drawing.Size(156, 72)
         Me.Button3.TabIndex = 17
         Me.Button3.Text = "BORRAR"
         Me.Button3.UseVisualStyleBackColor = False
@@ -202,9 +211,10 @@ Partial Class HistoriaClinica
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(357, 55)
+        Me.Button1.Location = New System.Drawing.Point(536, 85)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(104, 47)
+        Me.Button1.Size = New System.Drawing.Size(156, 72)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "AGREGAR"
         Me.Button1.UseVisualStyleBackColor = False
@@ -213,25 +223,28 @@ Partial Class HistoriaClinica
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button2.CausesValidation = False
-        Me.Button2.Location = New System.Drawing.Point(357, 116)
+        Me.Button2.Location = New System.Drawing.Point(536, 178)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(104, 47)
+        Me.Button2.Size = New System.Drawing.Size(156, 72)
         Me.Button2.TabIndex = 16
         Me.Button2.Text = "MODIFICAR"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(179, 69)
+        Me.TextBox1.Location = New System.Drawing.Point(268, 106)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(148, 26)
         Me.TextBox1.TabIndex = 1
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(179, 93)
+        Me.TextBox2.Location = New System.Drawing.Point(268, 143)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(148, 26)
         Me.TextBox2.TabIndex = 10
         '
         'Label1
@@ -240,9 +253,10 @@ Partial Class HistoriaClinica
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(65, 76)
+        Me.Label1.Location = New System.Drawing.Point(98, 117)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(108, 13)
+        Me.Label1.Size = New System.Drawing.Size(160, 20)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Nombre y apellido"
         '
@@ -252,9 +266,10 @@ Partial Class HistoriaClinica
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(99, 100)
+        Me.Label2.Location = New System.Drawing.Point(148, 154)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(36, 13)
+        Me.Label2.Size = New System.Drawing.Size(51, 20)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Edad"
         '
@@ -264,9 +279,10 @@ Partial Class HistoriaClinica
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label3.Location = New System.Drawing.Point(99, 126)
+        Me.Label3.Location = New System.Drawing.Point(148, 194)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(26, 13)
+        Me.Label3.Size = New System.Drawing.Size(38, 20)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Dni"
         '
@@ -276,9 +292,10 @@ Partial Class HistoriaClinica
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label4.Location = New System.Drawing.Point(99, 150)
+        Me.Label4.Location = New System.Drawing.Point(148, 231)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(30, 13)
+        Me.Label4.Size = New System.Drawing.Size(44, 20)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Mail"
         '
@@ -288,9 +305,10 @@ Partial Class HistoriaClinica
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label5.Location = New System.Drawing.Point(99, 172)
+        Me.Label5.Location = New System.Drawing.Point(148, 265)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(57, 13)
+        Me.Label5.Size = New System.Drawing.Size(81, 20)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Telefono"
         '
@@ -300,9 +318,10 @@ Partial Class HistoriaClinica
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label6.Location = New System.Drawing.Point(99, 200)
+        Me.Label6.Location = New System.Drawing.Point(148, 308)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(61, 13)
+        Me.Label6.Size = New System.Drawing.Size(90, 20)
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Direccion"
         '
@@ -312,9 +331,10 @@ Partial Class HistoriaClinica
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label7.Location = New System.Drawing.Point(99, 226)
+        Me.Label7.Location = New System.Drawing.Point(148, 348)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(62, 13)
+        Me.Label7.Size = New System.Drawing.Size(90, 20)
         Me.Label7.TabIndex = 9
         Me.Label7.Text = "Localidad"
         '
@@ -350,10 +370,11 @@ Partial Class HistoriaClinica
         Me.TabPage2.Controls.Add(Me.Label12)
         Me.TabPage2.Controls.Add(Me.Label13)
         Me.TabPage2.Controls.Add(Me.Label14)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1227, 407)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabPage2.Size = New System.Drawing.Size(1844, 633)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Antecedentes Médicos"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -361,9 +382,10 @@ Partial Class HistoriaClinica
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button4.Location = New System.Drawing.Point(522, 330)
+        Me.Button4.Location = New System.Drawing.Point(783, 508)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(104, 47)
+        Me.Button4.Size = New System.Drawing.Size(156, 72)
         Me.Button4.TabIndex = 52
         Me.Button4.Text = "BORRAR"
         Me.Button4.UseVisualStyleBackColor = False
@@ -371,9 +393,10 @@ Partial Class HistoriaClinica
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button5.Location = New System.Drawing.Point(522, 206)
+        Me.Button5.Location = New System.Drawing.Point(783, 317)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(104, 47)
+        Me.Button5.Size = New System.Drawing.Size(156, 72)
         Me.Button5.TabIndex = 50
         Me.Button5.Text = "AGREGAR"
         Me.Button5.UseVisualStyleBackColor = False
@@ -382,9 +405,10 @@ Partial Class HistoriaClinica
         '
         Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button6.CausesValidation = False
-        Me.Button6.Location = New System.Drawing.Point(522, 267)
+        Me.Button6.Location = New System.Drawing.Point(783, 411)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(104, 47)
+        Me.Button6.Size = New System.Drawing.Size(156, 72)
         Me.Button6.TabIndex = 51
         Me.Button6.Text = "MODIFICAR"
         Me.Button6.UseVisualStyleBackColor = False
@@ -392,9 +416,10 @@ Partial Class HistoriaClinica
         'DataGridView2
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(646, 6)
+        Me.DataGridView2.Location = New System.Drawing.Point(969, 9)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(575, 395)
+        Me.DataGridView2.Size = New System.Drawing.Size(862, 608)
         Me.DataGridView2.TabIndex = 49
         '
         'Label20
@@ -403,45 +428,51 @@ Partial Class HistoriaClinica
         Me.Label20.BackColor = System.Drawing.Color.Transparent
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label20.Location = New System.Drawing.Point(204, 3)
+        Me.Label20.Location = New System.Drawing.Point(306, 5)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(224, 24)
+        Me.Label20.Size = New System.Drawing.Size(329, 33)
         Me.Label20.TabIndex = 48
         Me.Label20.Text = "Antecedentes Médicos"
         '
         'TextBox15
         '
-        Me.TextBox15.Location = New System.Drawing.Point(526, 114)
+        Me.TextBox15.Location = New System.Drawing.Point(789, 175)
+        Me.TextBox15.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox15.Size = New System.Drawing.Size(148, 26)
         Me.TextBox15.TabIndex = 47
         '
         'TextBox16
         '
-        Me.TextBox16.Location = New System.Drawing.Point(526, 88)
+        Me.TextBox16.Location = New System.Drawing.Point(789, 135)
+        Me.TextBox16.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox16.Size = New System.Drawing.Size(148, 26)
         Me.TextBox16.TabIndex = 46
         '
         'TextBox17
         '
-        Me.TextBox17.Location = New System.Drawing.Point(526, 36)
+        Me.TextBox17.Location = New System.Drawing.Point(789, 55)
+        Me.TextBox17.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox17.Size = New System.Drawing.Size(148, 26)
         Me.TextBox17.TabIndex = 44
         '
         'TextBox18
         '
-        Me.TextBox18.Location = New System.Drawing.Point(526, 62)
+        Me.TextBox18.Location = New System.Drawing.Point(789, 95)
+        Me.TextBox18.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox18.Size = New System.Drawing.Size(148, 26)
         Me.TextBox18.TabIndex = 45
         '
         'TextBox20
         '
-        Me.TextBox20.Location = New System.Drawing.Point(248, 220)
+        Me.TextBox20.Location = New System.Drawing.Point(372, 338)
+        Me.TextBox20.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox20.Size = New System.Drawing.Size(148, 26)
         Me.TextBox20.TabIndex = 38
         '
         'Label15
@@ -450,9 +481,10 @@ Partial Class HistoriaClinica
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label15.Location = New System.Drawing.Point(16, 227)
+        Me.Label15.Location = New System.Drawing.Point(24, 349)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(93, 13)
+        Me.Label15.Size = New System.Drawing.Size(141, 20)
         Me.Label15.TabIndex = 39
         Me.Label15.Text = "Ciclo menstrual"
         '
@@ -462,9 +494,10 @@ Partial Class HistoriaClinica
         Me.Label16.BackColor = System.Drawing.Color.Transparent
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label16.Location = New System.Drawing.Point(367, 45)
+        Me.Label16.Location = New System.Drawing.Point(550, 69)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(92, 13)
+        Me.Label16.Size = New System.Drawing.Size(139, 20)
         Me.Label16.TabIndex = 40
         Me.Label16.Text = "Presion arterial"
         '
@@ -474,9 +507,10 @@ Partial Class HistoriaClinica
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label17.Location = New System.Drawing.Point(367, 71)
+        Me.Label17.Location = New System.Drawing.Point(550, 109)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(93, 13)
+        Me.Label17.Size = New System.Drawing.Size(140, 20)
         Me.Label17.TabIndex = 41
         Me.Label17.Text = "Protesis Dental"
         '
@@ -486,9 +520,10 @@ Partial Class HistoriaClinica
         Me.Label18.BackColor = System.Drawing.Color.Transparent
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label18.Location = New System.Drawing.Point(366, 93)
+        Me.Label18.Location = New System.Drawing.Point(549, 143)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(157, 13)
+        Me.Label18.Size = New System.Drawing.Size(235, 20)
         Me.Label18.TabIndex = 42
         Me.Label18.Text = "Posibilidades de embarazo"
         '
@@ -498,59 +533,67 @@ Partial Class HistoriaClinica
         Me.Label19.BackColor = System.Drawing.Color.Transparent
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label19.Location = New System.Drawing.Point(367, 123)
+        Me.Label19.Location = New System.Drawing.Point(550, 189)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(80, 13)
+        Me.Label19.Size = New System.Drawing.Size(118, 20)
         Me.Label19.TabIndex = 43
         Me.Label19.Text = "Constipacion"
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(248, 194)
+        Me.TextBox8.Location = New System.Drawing.Point(372, 298)
+        Me.TextBox8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox8.Size = New System.Drawing.Size(148, 26)
         Me.TextBox8.TabIndex = 37
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(248, 142)
+        Me.TextBox9.Location = New System.Drawing.Point(372, 218)
+        Me.TextBox9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox9.Size = New System.Drawing.Size(148, 26)
         Me.TextBox9.TabIndex = 35
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(248, 168)
+        Me.TextBox10.Location = New System.Drawing.Point(372, 258)
+        Me.TextBox10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox10.Size = New System.Drawing.Size(148, 26)
         Me.TextBox10.TabIndex = 36
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(248, 90)
+        Me.TextBox11.Location = New System.Drawing.Point(372, 138)
+        Me.TextBox11.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox11.Size = New System.Drawing.Size(148, 26)
         Me.TextBox11.TabIndex = 33
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(248, 116)
+        Me.TextBox12.Location = New System.Drawing.Point(372, 178)
+        Me.TextBox12.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox12.Size = New System.Drawing.Size(148, 26)
         Me.TextBox12.TabIndex = 34
         '
         'TextBox13
         '
-        Me.TextBox13.Location = New System.Drawing.Point(248, 38)
+        Me.TextBox13.Location = New System.Drawing.Point(372, 58)
+        Me.TextBox13.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox13.Size = New System.Drawing.Size(148, 26)
         Me.TextBox13.TabIndex = 24
         '
         'TextBox14
         '
-        Me.TextBox14.Location = New System.Drawing.Point(248, 64)
+        Me.TextBox14.Location = New System.Drawing.Point(372, 98)
+        Me.TextBox14.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox14.Size = New System.Drawing.Size(148, 26)
         Me.TextBox14.TabIndex = 32
         '
         'Label8
@@ -559,9 +602,10 @@ Partial Class HistoriaClinica
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label8.Location = New System.Drawing.Point(13, 43)
+        Me.Label8.Location = New System.Drawing.Point(20, 66)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(208, 13)
+        Me.Label8.Size = New System.Drawing.Size(309, 20)
         Me.Label8.TabIndex = 25
         Me.Label8.Text = "Enfermedades o dolencias cronicas"
         '
@@ -571,9 +615,10 @@ Partial Class HistoriaClinica
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label9.Location = New System.Drawing.Point(13, 71)
+        Me.Label9.Location = New System.Drawing.Point(20, 109)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(193, 13)
+        Me.Label9.Size = New System.Drawing.Size(285, 20)
         Me.Label9.TabIndex = 26
         Me.Label9.Text = "Medicamentos que esta tomando"
         '
@@ -583,9 +628,10 @@ Partial Class HistoriaClinica
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label10.Location = New System.Drawing.Point(16, 97)
+        Me.Label10.Location = New System.Drawing.Point(24, 149)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(190, 13)
+        Me.Label10.Size = New System.Drawing.Size(285, 20)
         Me.Label10.TabIndex = 27
         Me.Label10.Text = "Alergias a productos cosmeticos"
         '
@@ -595,9 +641,10 @@ Partial Class HistoriaClinica
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label11.Location = New System.Drawing.Point(13, 123)
+        Me.Label11.Location = New System.Drawing.Point(20, 189)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(231, 13)
+        Me.Label11.Size = New System.Drawing.Size(346, 20)
         Me.Label11.TabIndex = 28
         Me.Label11.Text = "Antecedentes dermatologicos familiares"
         '
@@ -607,9 +654,10 @@ Partial Class HistoriaClinica
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label12.Location = New System.Drawing.Point(13, 149)
+        Me.Label12.Location = New System.Drawing.Point(20, 229)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(153, 13)
+        Me.Label12.Size = New System.Drawing.Size(226, 20)
         Me.Label12.TabIndex = 29
         Me.Label12.Text = "Antecedentes hormonales"
         '
@@ -619,9 +667,10 @@ Partial Class HistoriaClinica
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label13.Location = New System.Drawing.Point(16, 175)
+        Me.Label13.Location = New System.Drawing.Point(24, 269)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(145, 13)
+        Me.Label13.Size = New System.Drawing.Size(214, 20)
         Me.Label13.TabIndex = 30
         Me.Label13.Text = "Antecedentes Cardiacos"
         '
@@ -631,9 +680,10 @@ Partial Class HistoriaClinica
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label14.Location = New System.Drawing.Point(13, 201)
+        Me.Label14.Location = New System.Drawing.Point(20, 309)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(146, 13)
+        Me.Label14.Size = New System.Drawing.Size(217, 20)
         Me.Label14.TabIndex = 31
         Me.Label14.Text = "Antecedentes Asmaticos"
         '
@@ -661,19 +711,77 @@ Partial Class HistoriaClinica
         Me.TabPage3.Controls.Add(Me.Label26)
         Me.TabPage3.Controls.Add(Me.Label27)
         Me.TabPage3.Controls.Add(Me.Label28)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1227, 407)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabPage3.Size = New System.Drawing.Size(1844, 633)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Habitos de vida"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'DataGridView3
+        '
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Location = New System.Drawing.Point(945, 14)
+        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.Size = New System.Drawing.Size(862, 608)
+        Me.DataGridView3.TabIndex = 60
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button7.Location = New System.Drawing.Point(760, 525)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(156, 72)
+        Me.Button7.TabIndex = 59
+        Me.Button7.Text = "BORRAR"
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button8.Location = New System.Drawing.Point(760, 334)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(156, 72)
+        Me.Button8.TabIndex = 57
+        Me.Button8.Text = "AGREGAR"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Button9
+        '
+        Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button9.CausesValidation = False
+        Me.Button9.Location = New System.Drawing.Point(760, 428)
+        Me.Button9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(156, 72)
+        Me.Button9.TabIndex = 58
+        Me.Button9.Text = "MODIFICAR"
+        Me.Button9.UseVisualStyleBackColor = False
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.BackColor = System.Drawing.Color.Transparent
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label29.Location = New System.Drawing.Point(160, 18)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(231, 33)
+        Me.Label29.TabIndex = 56
+        Me.Label29.Text = "Habitos de vida"
+        '
         'TextBox19
         '
-        Me.TextBox19.Location = New System.Drawing.Point(278, 231)
+        Me.TextBox19.Location = New System.Drawing.Point(417, 355)
+        Me.TextBox19.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox19.Size = New System.Drawing.Size(148, 26)
         Me.TextBox19.TabIndex = 54
         '
         'Label21
@@ -682,59 +790,67 @@ Partial Class HistoriaClinica
         Me.Label21.BackColor = System.Drawing.Color.Transparent
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label21.Location = New System.Drawing.Point(46, 238)
+        Me.Label21.Location = New System.Drawing.Point(69, 366)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(104, 13)
+        Me.Label21.Size = New System.Drawing.Size(154, 20)
         Me.Label21.TabIndex = 55
         Me.Label21.Text = "Ultima depilacion"
         '
         'TextBox21
         '
-        Me.TextBox21.Location = New System.Drawing.Point(278, 205)
+        Me.TextBox21.Location = New System.Drawing.Point(417, 315)
+        Me.TextBox21.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox21.Size = New System.Drawing.Size(148, 26)
         Me.TextBox21.TabIndex = 53
         '
         'TextBox22
         '
-        Me.TextBox22.Location = New System.Drawing.Point(278, 153)
+        Me.TextBox22.Location = New System.Drawing.Point(417, 235)
+        Me.TextBox22.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox22.Size = New System.Drawing.Size(148, 26)
         Me.TextBox22.TabIndex = 51
         '
         'TextBox23
         '
-        Me.TextBox23.Location = New System.Drawing.Point(278, 179)
+        Me.TextBox23.Location = New System.Drawing.Point(417, 275)
+        Me.TextBox23.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox23.Name = "TextBox23"
-        Me.TextBox23.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox23.Size = New System.Drawing.Size(148, 26)
         Me.TextBox23.TabIndex = 52
         '
         'TextBox24
         '
-        Me.TextBox24.Location = New System.Drawing.Point(278, 101)
+        Me.TextBox24.Location = New System.Drawing.Point(417, 155)
+        Me.TextBox24.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox24.Name = "TextBox24"
-        Me.TextBox24.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox24.Size = New System.Drawing.Size(148, 26)
         Me.TextBox24.TabIndex = 49
         '
         'TextBox25
         '
-        Me.TextBox25.Location = New System.Drawing.Point(278, 127)
+        Me.TextBox25.Location = New System.Drawing.Point(417, 195)
+        Me.TextBox25.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox25.Name = "TextBox25"
-        Me.TextBox25.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox25.Size = New System.Drawing.Size(148, 26)
         Me.TextBox25.TabIndex = 50
         '
         'TextBox26
         '
-        Me.TextBox26.Location = New System.Drawing.Point(278, 49)
+        Me.TextBox26.Location = New System.Drawing.Point(417, 75)
+        Me.TextBox26.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox26.Name = "TextBox26"
-        Me.TextBox26.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox26.Size = New System.Drawing.Size(148, 26)
         Me.TextBox26.TabIndex = 40
         '
         'TextBox27
         '
-        Me.TextBox27.Location = New System.Drawing.Point(278, 75)
+        Me.TextBox27.Location = New System.Drawing.Point(417, 115)
+        Me.TextBox27.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox27.Name = "TextBox27"
-        Me.TextBox27.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox27.Size = New System.Drawing.Size(148, 26)
         Me.TextBox27.TabIndex = 48
         '
         'Label22
@@ -743,9 +859,10 @@ Partial Class HistoriaClinica
         Me.Label22.BackColor = System.Drawing.Color.Transparent
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label22.Location = New System.Drawing.Point(43, 54)
+        Me.Label22.Location = New System.Drawing.Point(64, 83)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(58, 13)
+        Me.Label22.Size = New System.Drawing.Size(86, 20)
         Me.Label22.TabIndex = 41
         Me.Label22.Text = "Deportes"
         '
@@ -755,9 +872,10 @@ Partial Class HistoriaClinica
         Me.Label23.BackColor = System.Drawing.Color.Transparent
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label23.Location = New System.Drawing.Point(43, 82)
+        Me.Label23.Location = New System.Drawing.Point(64, 126)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(96, 13)
+        Me.Label23.Size = New System.Drawing.Size(142, 20)
         Me.Label23.TabIndex = 42
         Me.Label23.Text = "Horas de sueño"
         '
@@ -767,9 +885,10 @@ Partial Class HistoriaClinica
         Me.Label24.BackColor = System.Drawing.Color.Transparent
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label24.Location = New System.Drawing.Point(46, 108)
+        Me.Label24.Location = New System.Drawing.Point(69, 166)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(71, 13)
+        Me.Label24.Size = New System.Drawing.Size(103, 20)
         Me.Label24.TabIndex = 43
         Me.Label24.Text = "Toma Agua"
         '
@@ -779,9 +898,10 @@ Partial Class HistoriaClinica
         Me.Label25.BackColor = System.Drawing.Color.Transparent
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label25.Location = New System.Drawing.Point(43, 134)
+        Me.Label25.Location = New System.Drawing.Point(64, 206)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(37, 13)
+        Me.Label25.Size = New System.Drawing.Size(55, 20)
         Me.Label25.TabIndex = 44
         Me.Label25.Text = "Fuma"
         '
@@ -791,9 +911,10 @@ Partial Class HistoriaClinica
         Me.Label26.BackColor = System.Drawing.Color.Transparent
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label26.Location = New System.Drawing.Point(43, 160)
+        Me.Label26.Location = New System.Drawing.Point(64, 246)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(37, 13)
+        Me.Label26.Size = New System.Drawing.Size(54, 20)
         Me.Label26.TabIndex = 45
         Me.Label26.Text = "Dieta"
         '
@@ -803,9 +924,10 @@ Partial Class HistoriaClinica
         Me.Label27.BackColor = System.Drawing.Color.Transparent
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label27.Location = New System.Drawing.Point(46, 186)
+        Me.Label27.Location = New System.Drawing.Point(69, 286)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(134, 13)
+        Me.Label27.Size = New System.Drawing.Size(201, 20)
         Me.Label27.TabIndex = 46
         Me.Label27.Text = "Toma sol o cama solar"
         '
@@ -815,71 +937,22 @@ Partial Class HistoriaClinica
         Me.Label28.BackColor = System.Drawing.Color.Transparent
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label28.Location = New System.Drawing.Point(43, 212)
+        Me.Label28.Location = New System.Drawing.Point(64, 326)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(139, 13)
+        Me.Label28.Size = New System.Drawing.Size(203, 20)
         Me.Label28.TabIndex = 47
         Me.Label28.Text = "Usa lentes de contacto"
         '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.BackColor = System.Drawing.Color.Transparent
-        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label29.Location = New System.Drawing.Point(107, 12)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(154, 24)
-        Me.Label29.TabIndex = 56
-        Me.Label29.Text = "Habitos de vida"
-        '
-        'Button7
-        '
-        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button7.Location = New System.Drawing.Point(507, 341)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(104, 47)
-        Me.Button7.TabIndex = 59
-        Me.Button7.Text = "BORRAR"
-        Me.Button7.UseVisualStyleBackColor = False
-        '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button8.Location = New System.Drawing.Point(507, 217)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(104, 47)
-        Me.Button8.TabIndex = 57
-        Me.Button8.Text = "AGREGAR"
-        Me.Button8.UseVisualStyleBackColor = False
-        '
-        'Button9
-        '
-        Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button9.CausesValidation = False
-        Me.Button9.Location = New System.Drawing.Point(507, 278)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(104, 47)
-        Me.Button9.TabIndex = 58
-        Me.Button9.Text = "MODIFICAR"
-        Me.Button9.UseVisualStyleBackColor = False
-        '
-        'DataGridView3
-        '
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Location = New System.Drawing.Point(630, 9)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.Size = New System.Drawing.Size(575, 395)
-        Me.DataGridView3.TabIndex = 60
-        '
         'HistoriaClinica
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1259, 457)
+        Me.ClientSize = New System.Drawing.Size(1888, 703)
         Me.Controls.Add(TabControl1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "HistoriaClinica"
         Me.Text = "CLIENTE"
         TabControl1.ResumeLayout(False)

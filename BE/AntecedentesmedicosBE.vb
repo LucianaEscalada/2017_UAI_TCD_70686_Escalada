@@ -1,5 +1,8 @@
 ﻿Public Class AntecedentesmedicosBE
 
+
+    Public Property id_antecedente As Integer
+    Public Property id_cliente As Integer
     Public Property enfermedadesodolencias As String
     Public Property medicamentosquetoma As String
     Public Property alergiasaproductos As String
@@ -12,6 +15,6 @@
     Public Property protesisdental As String
     Public Property posibilidadesembarazo As String
     Public Property constipacion As String
-
+    Public Property antecedentesdermatologicos As String
 
 End Class

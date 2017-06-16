@@ -70,17 +70,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HistoriaClinica.vb">
+    <Compile Include="Sistema\HistoriaClinica.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HistoriaClinica.Designer.vb">
+    <Compile Include="Sistema\HistoriaClinica.Designer.vb">
       <DependentUpon>HistoriaClinica.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Esteticista.Designer.vb">
+    <Compile Include="Sistema\Esteticista.Designer.vb">
       <DependentUpon>Esteticista.vb</DependentUpon>
     </Compile>
-    <Compile Include="Esteticista.vb">
+    <Compile Include="Sistema\Esteticista.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -98,16 +98,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="producto.Designer.vb">
+    <Compile Include="Sistema\producto.Designer.vb">
       <DependentUpon>producto.vb</DependentUpon>
     </Compile>
-    <Compile Include="producto.vb">
+    <Compile Include="Sistema\producto.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="proveedor.Designer.vb">
+    <Compile Include="Sistema\proveedor.Designer.vb">
       <DependentUpon>proveedor.vb</DependentUpon>
     </Compile>
-    <Compile Include="proveedor.vb">
+    <Compile Include="Sistema\proveedor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegistroUsuario\Registrarse.Designer.vb">
@@ -116,10 +116,16 @@
     <Compile Include="RegistroUsuario\Registrarse.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tratamientos.Designer.vb">
+    <Compile Include="Sistema\Tratamientos.Designer.vb">
       <DependentUpon>Tratamientos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Tratamientos.vb">
+    <Compile Include="Sistema\Tratamientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\turnos.Designer.vb">
+      <DependentUpon>turnos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\turnos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UsuarioFamiliaPatente\DialogoPatentes.Designer.vb">
@@ -158,24 +164,24 @@
     <Compile Include="UsuarioFamiliaPatente\Usuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="usuariologin.Designer.vb">
+    <Compile Include="Sistema\usuariologin.Designer.vb">
       <DependentUpon>usuariologin.vb</DependentUpon>
     </Compile>
-    <Compile Include="usuariologin.vb">
+    <Compile Include="Sistema\usuariologin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VenderProducto.Designer.vb">
+    <Compile Include="Sistema\VenderProducto.Designer.vb">
       <DependentUpon>VenderProducto.vb</DependentUpon>
     </Compile>
-    <Compile Include="VenderProducto.vb">
+    <Compile Include="Sistema\VenderProducto.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="HistoriaClinica.resx">
+    <EmbeddedResource Include="Sistema\HistoriaClinica.resx">
       <DependentUpon>HistoriaClinica.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Esteticista.resx">
+    <EmbeddedResource Include="Sistema\Esteticista.resx">
       <DependentUpon>Esteticista.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -184,17 +190,20 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="producto.resx">
+    <EmbeddedResource Include="Sistema\producto.resx">
       <DependentUpon>producto.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="proveedor.resx">
+    <EmbeddedResource Include="Sistema\proveedor.resx">
       <DependentUpon>proveedor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroUsuario\Registrarse.resx">
       <DependentUpon>Registrarse.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tratamientos.resx">
+    <EmbeddedResource Include="Sistema\Tratamientos.resx">
       <DependentUpon>Tratamientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\turnos.resx">
+      <DependentUpon>turnos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioFamiliaPatente\DialogoPatentes.resx">
       <DependentUpon>DialogoPatentes.vb</DependentUpon>
@@ -214,10 +223,10 @@
     <EmbeddedResource Include="UsuarioFamiliaPatente\Usuarios.resx">
       <DependentUpon>Usuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="usuariologin.resx">
+    <EmbeddedResource Include="Sistema\usuariologin.resx">
       <DependentUpon>usuariologin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VenderProducto.resx">
+    <EmbeddedResource Include="Sistema\VenderProducto.resx">
       <DependentUpon>VenderProducto.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

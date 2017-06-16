@@ -19,6 +19,7 @@ Public Class GrupoPatente
 
     Sub New(mPatenteBE As BE.PatenteAbstracta)
         CargarPropiedades(mPatenteBE.id)
+        CargarHijos()
     End Sub
 
     Sub New()
@@ -155,6 +156,11 @@ Public Class GrupoPatente
     End Function
 
 
+    'Este metodo es el encargado de ir a la base y traer todas las patentes que tengan como padre el id de este
+    'grupoPatente (sin importar si son patentes o gruposPatente). Si dentro de esa lista de "patentes hijo" hay
+    'alguna que sea grupoPatente, esa tambien se carga con las patentes que tenga como hijo.
+    '(Eso ultimo pasa porque este metodo se llama desde los constructores de grupoPatente, entonces cada vez que
+    ' se instancia uno este ya carga su lista de patentes)
     Private Sub CargarHijos()
         Dim mListaCompuestos As List(Of BE.GrupoPatente) = GrupoPatenteDAL.Listar(Me.id)
         Dim mListaSimples As List(Of BE.patente) = PatenteDAL.Listar(Me.id)

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -63,6 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Sistema\antecedentes_medicosBLL.vb" />
     <Compile Include="encriptadorBLL.vb" />
     <Compile Include="Sistema\cliente.vb" />
     <Compile Include="Sistema\esteticistabll.vb" />
